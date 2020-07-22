@@ -1,0 +1,34 @@
+{
+  "title": "Unicorn Design for Websites",
+	"author": "André Wegmüller",
+	"date": "22.07.2020",
+	"version": "1.0",
+	"__REM": "----- INCLUDES -----",
+	"includes": {
+	  "__chrome__": {
+		  "name": "Website Master",
+		  "reference": "__chrome__",
+			"file": "design.html"
+		},
+		"__page__": {
+		  "name": "Vorlage für Inhaltsseiten",
+		  "reference": "__page__",
+			"file": "include/page.html"
+		},
+		"navigation": {
+		  "name": "Navigation",
+		  "reference": "navigation",
+			"file": "include/navigation.html"
+		},
+		"header": {
+		  "name": "Kopfzeile",
+		  "reference": "header",
+			"file": "include/header.html"
+		},
+		"footer": {
+		  "name": "Fusszeile",
+		  "reference": "footer",
+			"file": "include/footer.html"
+		}
+	}
+}

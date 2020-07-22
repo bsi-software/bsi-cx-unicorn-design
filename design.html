@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+
+  <head>
+    <title>Fancy Unicorn Design For Websites!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/brands.css" integrity="sha384-IiIL1/ODJBRTrDTFk/pW8j0DUI5/z9m1KYsTm/RjZTNV8RHLGZXkUDwgRRbbQ+Jh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+  </head>
+	
+  <body>
+
+  <!-- HEADER -->
+	<studio:include reference="header"></studio:include>
+	
+	<!-- NAVIGATION -->
+	<studio:include reference="navigation"></studio:include>
+
+  <!-- PAGE -->
+	<studio:include reference="{{navigation.activePage.id}}"></studio:include>
+
+	<hr>
+
+	<div id="banner">
+		<a href="http://www.bsi-software.com" target="_blank"><img src="img/banner-1.png" id="banner-image"></a><br>
+		<div id="banner-text">Please support our friends!</div>
+	</div>
+
+  <!-- FOOTER -->
+	<studio:include reference="footer"></studio:include>
+
+  <script src="js/main.js"></script>
+
+  <!-- TODO: Remove fake-dropzone, Currently required to pass DesignParser validation on upload -->
+	<div style="display: none;"
+	  data-bsi-dropzone="fake-dropzone" 
+	  data-bsi-dropzone-max-number-of-elements="1"
+	  data-bsi-dropzone-allowed-elements="chrome-header">
+	</div>
+
+  </body>
+</html>

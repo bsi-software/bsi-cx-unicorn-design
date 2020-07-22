@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="de">
+<head>
+<title>Unicorn Content Elements</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Group: TEXTS AND OTHERS -->
+  <div data-bsi-group="texts-and-others">
+
+    <!-- Content Element: Title -->
+    <div data-bsi-element="title">
+      <h2 data-bsi-element-part="plain-text">Titel</h2>
+    </div>
+
+    <!-- Content Element: Text only -->
+    <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="italic-text">Text...</div>
+
+    <!-- Content Element: Text with Image -->
+    <div data-bsi-element="text-with-image">
+      <img src="img/cute-kitty.jpg" class="image" data-bsi-element-part="image">
+      <div class="text" data-bsi-element-part="formatted-text">Bildbeschreibung...</div>
+    </div>
+
+    <!-- Content Element: Text with Background Image -->
+    <div data-bsi-element="text-with-background-image" data-bsi-element-part="background-image" style="background-image: url(); background-repeat: no-repeat; background-size: cover;">
+      <div class="text" data-bsi-element-part="formatted-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+
+    <!-- Content Element: Image with srcset -->
+    <div data-bsi-element="image-with-srcset">
+      <img src="img/star.png" class="image" data-bsi-element-part="image" srcset="img/star.png 350w, img/star.png 700w" sizes="350px">
+    </div>
+
+    <!-- Content Element: Fixed Text -->
+    <div data-bsi-element="fixed-text" data-bsi-element-part="plain-text">
+      Your everlasting patience will be rewarded sooner or later.</div>
+
+    <!-- Content Element: CTA Button, part sets the href attribute and the link text -->
+    <div data-bsi-element="cta-button" class="cta-button-container">
+      <a data-bsi-element-part="link" class="cta-button"></a>
+    </div>
+
+  </div>
+
+  <!-- Group: TABLES -->
+  <div data-bsi-group="tables">
+    <div data-bsi-element="empty-table" data-bsi-element-part="table">
+      <table>
+      </table>
+    </div>
+
+    <div data-bsi-element="sample-table" data-bsi-element-part="table">
+      <table>
+        <tr>
+          <th>One</th>
+          <th>Two</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Content-Elemente: Iterator -->
+    <div data-bsi-element="ul-iterator">
+      <p>Aufzählung:</p>
+      <ul data-bsi-element-part="iterator" data-bsi-iterator="">
+        <li data-bsi-iterator-item="" data-bsi-element-part="formatted-text"></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Group: FORMS -->
+  <div data-bsi-group="forms">
+
+    <!-- Content Element: Single Column Form -->
+    <form class="form single-column-form" data-bsi-element="single-column-form" data-bsi-element-part="form">
+      <div class="form-validation" data-bsi-form-validation>
+        <div class="form-validation-item" data-bsi-form-validation-item></div>
+      </div>
+      <div class="form-content" data-bsi-dropzone="form-content"
+        data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
+      <div class="form-button-bar">
+        <div class="form-button-container submit">
+          <input type="submit" class="form-button send" value="Send">
+        </div>
+        <div class="form-button-container reset">
+          <input type="reset" class="form-button reset" value="Reset">
+        </div>
+      </div>
+    </form>
+
+    <!-- Content Element: Two Column Form -->
+    <form class="form two-column-form" data-bsi-element="two-column-form" data-bsi-element-part="form">
+      <div class="form-validation" data-bsi-form-validation>
+        <div class="form-validation-item" data-bsi-form-validation-item></div>
+      </div>
+      <div class="form-column-left form-content" data-bsi-dropzone="form-column-left"
+          data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
+      <div class="form-column-right form-content" data-bsi-dropzone="form-column-right"
+          data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
+      <div class="form-button-bar">
+        <div class="form-button-container submit">
+          <input type="submit" class="form-button send" value="Send">
+        </div>
+        <div class="form-button-container reset">
+          <input type="reset" class="form-button reset" value="Reset">
+        </div>
+      </div>
+    </form>
+
+    <!-- Content Element: Form Text Field -->
+    <div data-bsi-element="form-field" data-bsi-element-part="form-field" class="form-field-container form-field">
+      <label></label>
+      <input type="text">
+    </div>
+
+    <!-- Content Element: Form Checkbox -->
+    <div data-bsi-element="form-checkbox" data-bsi-element-part="form-checkbox" class="form-field-container form-checkbox">
+      <input type="checkbox">
+      <label></label>
+    </div>
+
+    <!-- Content Element: Form Textarea -->
+    <div data-bsi-element="form-textarea" data-bsi-element-part="form-textarea" class="form-field-container form-textarea">
+      <label></label>
+      <textarea rows="7" maxlength="500"></textarea>
+    </div>
+
+    <!-- Content Element: Form Select -->
+    <div data-bsi-element="form-select" data-bsi-element-part="form-select" class="form-field-container form-select">
+      <label></label>
+      <select size="1">
+        <option>&lt;1. Option&gt;</option>
+      </select>
+    </div>
+
+    <!-- Content Element: Form Radio -->
+    <div data-bsi-element="form-radio" data-bsi-element-part="form-radio" class="form-field-container form-radio">
+      <label></label>
+      <div class="form-radio-group" data-bsi-radio-group>
+        <div class="form-radio-item" data-bsi-radio-item>
+          <input type="radio">
+          <label>&lt;1. Radio-Button&gt;</label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Group: ADVANCED -->
+  <div data-bsi-group="advanced">
+
+    <!-- Content Element: HTML -->
+    <div data-bsi-element="html" data-bsi-element-part="html">
+      <div>
+        <span>HTML</span> Content
+      </div>
+    </div>
+
+    <!-- Content Element: Video, src attribute is set by the part -->
+    <div data-bsi-element="video" data-bsi-element-part="video" class="video-container">
+      <iframe width="560" height="315" frameborder="0" class="video" allow="autoplay; encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <!-- Content Element: Video, src attribute is set by the part -->
+    <div data-bsi-element="video-thumbnail" data-bsi-element-part="video" class="video-container">
+      <img src="img/news-image.png" width="560" height="315" data-bsi-video-thumbnail="" />
+    </div>
+
+    <!-- Content Element: Video, src attribute is set by the part -->
+    <div data-bsi-element="video-iframe-with-title-description-link" data-bsi-element-part="video" class="video-container">
+      <img src="img/news-image.png" width="560" height="315" data-bsi-video-thumbnail="" />
+      <h1 data-bsi-video-title="">Video title</h1>
+      <div data-bsi-video-description="">Video description</div>
+      <div><a href="" data-bsi-video-link="">Video Link</a></div>
+    </div>
+
+    <!-- Content Element: Social follow -->
+    <div data-bsi-element="social-follow" data-bsi-element-part="social-follow" class="social-media-container">
+      <div class="social-media-info">Follow us</div>
+      <div data-bsi-social-follow="Facebook" class="sm-facebook social-media-item"><a href="https://www.facebook.com/" class="fab fa-facebook-square" target="_blank"></a></div>
+      <div data-bsi-social-follow="Google+" class="sm-google-plus social-media-item"><a href="https://plus.google.com/" class="fab fa-google-plus-square" target="_blank"></a></div>
+      <div data-bsi-social-follow="Twitter" class="sm-twitter social-media-item"><a href="https://twitter.com/" class="fab fa-twitter-square" target="_blank"></a></div>
+    </div>
+
+    <!-- Content Element: Social share -->
+    <div data-bsi-element="social-share" data-bsi-element-part="social-share" class="social-media-container">
+      <div class="social-media-info">Share this page</div>
+      <div data-bsi-social-share="E-Mail" class="sm-email social-media-item share"><a href="mailto:?subject=(subject.with.title)&body=(description.with.url)" class="fas fa-envelope-square"></a></div>
+      <div data-bsi-social-share="Facebook" class="sm-facebook social-media-item share"><a href="https://www.facebook.com/sharer/sharer.php?u=(url)" class="fab fa-facebook-square" target="_blank"></a></div>
+      <div data-bsi-social-share="Google+" class="sm-google-plus social-media-item share"><a href="https://plus.google.com/share?url=(url)" class="fab fa-google-plus-square" target="_blank"></a></div>
+      <div data-bsi-social-share="LinkedIn" class="sm-linkedin social-media-item share"><a href="https://www.linkedin.com/shareArticle?mini=true&url=(url)&summary=(title)&source=FancyUnicorns" class="fab fa-linkedin" target="_blank"></a></div>
+      <div data-bsi-social-share="Pinterest" class="sm-pinterest social-media-item share"><a href="http://pinterest.com/pin/create/button/?url=(url)&description=(title)&media=(preview.image.url)" class="fab fa-pinterest-square" target="_blank"></a></div>
+      <div data-bsi-social-share="Twitter" class="sm-twitter social-media-item share"><a href="https://twitter.com/intent/tweet?url=(url)&text=(description.short)" class="fab fa-twitter-square" target="_blank"></a></div>
+      <div data-bsi-social-share="WhatsApp" class="sm-whatsapp social-media-item share"><a href="whatsapp://send?text=(title.with.url)" class="fab fa-whatsapp-square" target="_blank"></a></div>
+      <div data-bsi-social-share="Xing" class="sm-xing social-media-item share"><a href="https://www.xing.com/spi/shares/new?url=(url)" class="fab fa-xing-square" target="_blank"></a></div>
+    </div>
+
+    <!-- Content Element: News snippets -->
+    <div data-bsi-element="news-snippets" data-bsi-element-part="news-snippets" class="news-snippets">
+      <div data-bsi-news-snippet class="news-snippet">
+        <img class="ns-image" src="img/news-image.png" data-bsi-property="image"> <!-- will be wrapped in an A element if NS item has a link -->
+        <h3 class="ns-title" data-bsi-property="title">Breaking News</h3> <!-- will be wrapped in an A element if NS item has a link -->
+        <p class="ns-headline" data-bsi-property="headline">Alien Life May Exist on Exoplanet Moons</p>
+        <p class="ns-text" data-bsi-property="text">Lorem ipsum dolor sit amet, ea vis odio voluptua, pri ei facer denique. Nobis minimum lucilius cum ei,
+          at mel everti vocibus. Mea vide vidit option ut, placerat instructior eu mei, ei dolor tation latine mea.</p>
+      </div>
+    </div>
+
+    <!-- Content Element: QR-Code -->
+    <div data-bsi-element="qr-code" class="qr-code">
+      <img src="{QR Code}" class="image" data-bsi-element-part="image" data-bsi-placeholder="img/qr-code.png" data-bsi-dynamic-src="true">
+    </div>
+
+    <div data-bsi-element="5-star-survey" class="5-star-survey">
+      <a href="[survey-star-1]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
+      <a href="[survey-star-2]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
+      <a href="[survey-star-3]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
+      <a href="[survey-star-4]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
+      <a href="[survey-star-5]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
+    </div>
+
+  </div>
+
+  <!-- Group: CHROME -->
+	<div data-bsi-group="chrome">
+	
+		<div data-bsi-element="chrome-header">
+		  <img src="img/nyan-cat.gif">
+      <h1 data-bsi-element-part="plain-text">Fancy Unicorn Design For Websites!</h1>
+    </div>
+	
+	</div>
+
+</body>
+</html>
