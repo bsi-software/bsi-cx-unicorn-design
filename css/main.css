@@ -11,6 +11,7 @@ body {
   padding-bottom: 20px; /* required for editor, otherwise the document is cut off at the bottom */
 }
 
+/* ---- HEADER ---- */
 header {
   background-color: #0e4572;
 }
@@ -29,6 +30,7 @@ header > div > img {
   width: 120px;
 }
 
+/* ---- NAVIGATION ---- */
 nav {
   padding: 10px;
   font-family: "Comic Sans MS", serif;
@@ -36,15 +38,92 @@ nav {
   color: white;
 }
 
-nav > a {
+.navigation-item-lv1 {
   color: #722a88;
   margin-right: 10px;
+  text-decoration: none;
 }
 
-nav > a:visited {
+.navigation-item-lv2 {
+  display: block;
+  color: #722a88;
+  text-decoration: none;
+  border-bottom: solid 1px #f1b4bf;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  min-width: 100px;
+}
+
+.navigation-item-lv2.last {
+  border-bottom: none;
+}
+
+.navigation-item-lv1:visited,
+.navigation-item-lv2:visited {
   color: #722a88;
 }
 
+.navigation-item-container-lv1 {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.navigation-item-container-lv2 { /* display none by default, will be activated by JS */
+  display: none;
+  position: absolute;
+  background-color: #ffdfe5;
+  padding: 4px 16px 4px 16px;
+  border: 2px solid #e98798;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.navigation-visible {
+  display: block;
+}
+
+.navigation-fade-in {
+  animation: fadeIn ease 250ms;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0; margin-top: -20px}
+  100% {opacity:1; margin-top: 0}
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background: pink;
+  background: linear-gradient(to bottom, #ffe4e9 0%,#ffd1d9 100%);
+  border-radius: 5px;
+  border: solid 2px pink;
+  padding: 10px;
+  font-size: 14px;
+  color: #884954;
+}
+
+footer > a {
+  color: #884954;
+}
+
+#banner {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#banner-text, .social-media-info {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #eee;
+  padding: 4px;
+  border-radius: 5px;
+  margin: auto;
+  width: 40%;
+}
+
+/* ---- CONTENT ---- */
 .content-container-with-box {
   text-align: center;
   display: flex;
@@ -98,36 +177,6 @@ h2 {
 
 h2:first-child {
   margin-top: 0;
-}
-
-#banner {
-  margin: 20px 0;
-  text-align: center;
-}
-
-#banner-text, .social-media-info {
-  color: #666;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: #eee;
-  padding: 4px;
-  border-radius: 5px;
-  margin: auto;
-  width: 40%;
-}
-
-footer {
-  background: pink;
-  background: linear-gradient(to bottom, #ffe4e9 0%,#ffd1d9 100%);
-  border-radius: 5px;
-  border: solid 2px pink;
-  padding: 10px;
-  font-size: 14px;
-  color: #884954;
-}
-
-footer > a {
-  color: #884954;
 }
 
 .video-container {

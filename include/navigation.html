@@ -1,7 +1,20 @@
-{{#navigation}}
+{{#if navigation}}
 <nav class="navigation">
-  {{#navigation.items}}
-  <a href="{{url}}" id="navigation-item-{{id}}">{{title}}</a>
-  {{/navigation.items}}
+  {{#each navigation.items}}
+  <div class="navigation-item-container-lv1">
+    {{#if isFolder}}
+    <div id="navigation-item-{{id}}" class="navigation-item-lv1 navigation-folder">{{title}}</div>
+    {{else}}
+    <a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv1">{{title}}</a>
+    {{/if}}
+    {{#if items}}
+    <div id="navigation-item-{{id}}-children" class="navigation-item-container-lv2">
+      {{#each items}}
+      <a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv2">{{title}}</a>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+  {{/each}}
 </nav>
-{{/navigation}}
+{{/if}}
