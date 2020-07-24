@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright (c) BSI Business Systems Integration AG. All rights reserved.
+  ~ http://www.bsiag.com/
+  -->
 <!doctype html>
 <html lang="de">
 <head>
@@ -8,83 +12,75 @@
 </head>
 <body>
 
-  <!-- Group: TEXTS AND OTHERS -->
-  <div data-bsi-group="texts-and-others">
+  <!-- Group: CONTENT -->
+  <div data-bsi-group="content">
 
     <!-- Content Element: Title -->
-    <div data-bsi-element="title">
+    <div data-bsi-element="title" class="title">
       <h2 data-bsi-element-part="plain-text">Titel</h2>
     </div>
 
     <!-- Content Element: Text only -->
-    <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="italic-text">Text...</div>
+    <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">Text...</div>
 
     <!-- Content Element: Text with Image -->
-    <div data-bsi-element="text-with-image">
+    <div data-bsi-element="text-with-image" class="text-with-image">
       <img src="img/cute-kitty.jpg" class="image" data-bsi-element-part="image">
       <div class="text" data-bsi-element-part="formatted-text">Bildbeschreibung...</div>
     </div>
 
-    <!-- Content Element: Text with Background Image -->
-    <div data-bsi-element="text-with-background-image" data-bsi-element-part="background-image" style="background-image: url(); background-repeat: no-repeat; background-size: cover;">
-      <div class="text" data-bsi-element-part="formatted-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
+    <!-- Content Element: Single Image -->
+    <div data-bsi-element="single-image" class="single-image">
+      <img src="img/cute-kitty.jpg" data-bsi-element-part="image">
     </div>
 
-    <!-- Content Element: Image with srcset -->
-    <div data-bsi-element="image-with-srcset">
-      <img src="img/star.png" class="image" data-bsi-element-part="image" srcset="img/star.png 350w, img/star.png 700w" sizes="350px">
-    </div>
-
-    <!-- Content Element: Fixed Text -->
-    <div data-bsi-element="fixed-text" data-bsi-element-part="plain-text">
-      Your everlasting patience will be rewarded sooner or later.</div>
-
-    <!-- Content Element: CTA Button, part sets the href attribute and the link text -->
+    <!-- Content Element: CTA Button -->
     <div data-bsi-element="cta-button" class="cta-button-container">
-      <a data-bsi-element-part="link" class="cta-button"></a>
+      <a data-bsi-element-part="link" class="cta-button">Action</a>
     </div>
 
-  </div>
-
-  <!-- Group: TABLES -->
-  <div data-bsi-group="tables">
-    <div data-bsi-element="empty-table" data-bsi-element-part="table">
-      <table>
-      </table>
-    </div>
-
-    <div data-bsi-element="sample-table" data-bsi-element-part="table">
-      <table>
-        <tr>
-          <th>One</th>
-          <th>Two</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>6</td>
-        </tr>
-      </table>
-    </div>
-
-    <!-- Content-Elemente: Iterator -->
-    <div data-bsi-element="ul-iterator">
+    <!-- Content-Element: Bullet list -->
+    <div data-bsi-element="bullet-list" class="bullet-list">
       <p>Aufzählung:</p>
       <ul data-bsi-element-part="iterator" data-bsi-iterator="">
         <li data-bsi-iterator-item="" data-bsi-element-part="formatted-text"></li>
       </ul>
     </div>
 
-  </div>
+    <!-- Content Element: content-container-with-box -->
+    <div data-bsi-element="content-container-with-box" class="content-container-with-box">
+
+      <div class="content-container-column-left" data-bsi-dropzone="content-container-column-left"
+           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code html social-follow social-share">
+        <div data-bsi-element="single-image" class="single-image">
+          <img src="img/unicorn.jpg" data-bsi-element-part="image">
+        </div>
+      </div>
+
+      <div class="content-container-column-right" data-bsi-dropzone="content-container-column-right"
+           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form html social-follow social-share">
+        <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">Text...</div>
+      </div>
+
+    </div>
+
+    <!-- Content Element: table -->
+    <div data-bsi-element="table" data-bsi-element-part="table" class="table">
+      <table>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+        </tr>
+        <tr>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+      </table>
+    </div>
+
+  </div><!-- EOF Group: CONTENT -->
 
   <!-- Group: FORMS -->
   <div data-bsi-group="forms">
@@ -184,14 +180,6 @@
       <img src="img/news-image.png" width="560" height="315" data-bsi-video-thumbnail="" />
     </div>
 
-    <!-- Content Element: Video, src attribute is set by the part -->
-    <div data-bsi-element="video-iframe-with-title-description-link" data-bsi-element-part="video" class="video-container">
-      <img src="img/news-image.png" width="560" height="315" data-bsi-video-thumbnail="" />
-      <h1 data-bsi-video-title="">Video title</h1>
-      <div data-bsi-video-description="">Video description</div>
-      <div><a href="" data-bsi-video-link="">Video Link</a></div>
-    </div>
-
     <!-- Content Element: Social follow -->
     <div data-bsi-element="social-follow" data-bsi-element-part="social-follow" class="social-media-container">
       <div class="social-media-info">Follow us</div>
@@ -241,12 +229,12 @@
 
   <!-- Group: CHROME -->
 	<div data-bsi-group="chrome">
-	
+
 		<div data-bsi-element="chrome-header">
 		  <img src="img/nyan-cat.gif">
       <h1 data-bsi-element-part="plain-text">Fancy Unicorn Design For Websites!</h1>
     </div>
-	
+
 	</div>
 
 </body>
