@@ -1,3 +1,10 @@
+{{!-- Use a partial because of recursive navigation items structure. We don't want   --}}
+{{!-- to inherit properties from the parent navigation item, like 'first' and 'last' --}}
+
+{{#*inline "level2NavigationItem"}}
+<a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv2{{#if @first}} first{{/if}}{{#if @last}} last{{/if}}">{{title}}</a>
+{{/inline}}
+
 {{#if navigation}}
 <nav class="navigation">
   {{#each navigation.items}}
@@ -10,7 +17,7 @@
     {{#if items}}
     <div id="navigation-item-{{id}}-children" class="navigation-item-container-lv2">
       {{#each items}}
-      <a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv2">{{title}}</a>
+      {{> level2NavigationItem }}
       {{/each}}
     </div>
     {{/if}}
