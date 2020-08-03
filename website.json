@@ -1,6 +1,6 @@
 {
   "title": "Unicorn Design for Websites",
-	"author": "André Wegmüller",
+	"author": "AndrÃ© WegmÃ¼ller",
 	"date": "22.07.2020",
 	"version": "1.0",
 	"__REM": "----- INCLUDES -----",
@@ -11,14 +11,14 @@
 			"file": "design.html"
 		},
 		"__page__": {
-		  "name": "Vorlage für Inhaltsseiten",
+		  "name": "Vorlage fÃ¼r Inhaltsseiten",
 		  "reference": "__page__",
 			"file": "include/page.html"
 		},
 		"navigation": {
 		  "name": "Navigation",
 		  "reference": "navigation",
-			"file": "include/navigation.html"
+			"file": "include/navigation.hbs"
 		},
 		"header": {
 		  "name": "Kopfzeile",
