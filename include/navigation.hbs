@@ -9,7 +9,7 @@
 <nav class="navigation">
   {{#each navigation.items}}
   <div class="navigation-item-container-lv1">
-    {{#if isFolder}}
+    {{#if folder}}
     <div id="navigation-item-{{id}}" class="navigation-item-lv1 navigation-folder">{{title}}</div>
     {{else}}
     <a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv1">{{title}}</a>
