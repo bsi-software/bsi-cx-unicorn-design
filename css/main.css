@@ -44,6 +44,10 @@ nav {
   text-decoration: none;
 }
 
+.navigation-item-lv1.active {
+  color: #0e4572;
+}
+
 .navigation-item-lv2 {
   display: block;
   color: #722a88;
@@ -52,6 +56,10 @@ nav {
   padding-top: 2px;
   padding-bottom: 3px;
   min-width: 100px;
+}
+
+.navigation-item-lv2.active {
+  color: #e98798;
 }
 
 .navigation-item-lv2.last {
@@ -85,6 +93,10 @@ nav {
 
 .navigation-fade-in {
   animation: fadeIn ease 250ms;
+}
+
+.navigation-folder {
+  cursor: pointer;
 }
 
 @keyframes fadeIn {

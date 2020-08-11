@@ -2,7 +2,7 @@
 {{!-- to inherit properties from the parent navigation item, like 'first' and 'last' --}}
 
 {{#*inline "level2NavigationItem"}}
-<a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv2{{#if @first}} first{{/if}}{{#if @last}} last{{/if}}">{{title}}</a>
+<a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv2{{#if @first}} first{{/if}}{{#if @last}} last{{/if}}{{#if active}} active{{/if}}">{{title}}</a>
 {{/inline}}
 
 {{#if navigation}}
@@ -12,7 +12,7 @@
     {{#if folder}}
     <div id="navigation-item-{{id}}" class="navigation-item-lv1 navigation-folder">{{title}}</div>
     {{else}}
-    <a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv1">{{title}}</a>
+    <a href="{{url}}" id="navigation-item-{{id}}" class="navigation-item-lv1{{#if active}} active{{/if}}">{{title}}</a>
     {{/if}}
     {{#if items}}
     <div id="navigation-item-{{id}}-children" class="navigation-item-container-lv2">
