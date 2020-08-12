@@ -84,7 +84,7 @@ nav {
   border: 2px solid #e98798;
   z-index: 1000;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
 }
 
 .navigation-visible {
