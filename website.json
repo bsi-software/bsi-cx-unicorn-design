@@ -3,6 +3,16 @@
 	"author": "André Wegmüller",
 	"date": "22.07.2020",
 	"version": "1.0",
+  "i18n": {
+    "banner": {
+      "*": "Please support our friends!",
+      "de": "Bitte unterstütze unsere Freunde!"
+    },
+    "website.title": {
+      "*": "Fancy Unicorn Design For Websites",
+      "de": "Das unglaubliche Unicorn Design für Websites"
+    }
+  },
 	"__REM": "----- INCLUDES -----",
 	"includes": {
 	  "__chrome__": {
