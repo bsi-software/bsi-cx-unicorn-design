@@ -22,7 +22,7 @@ header > div > h1 {
   font-size: 36px;
   vertical-align: top;
   margin-top: 20px;
-  font-family: "Script MT", serif;
+  font-family: "Footlight MT Light", serif
 }
 
 header > div > img {
@@ -182,7 +182,7 @@ hr {
 h2 {
   margin: 10px 0;
   text-align: left;
-  font-family: "Script MT", serif;
+  font-family: "Footlight MT Light", serif;
   font-size: 36px;
   color: #0e4572;
 }
