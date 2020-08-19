@@ -24,9 +24,9 @@
   },
 	"__REM001": "----- INCLUDES -----",
 	"includes": {
-	  "__chrome__": {
+	  "__master__": {
 		  "name": "Website Master",
-		  "reference": "__chrome__",
+		  "reference": "__master__",
 			"file": "design.html"
 		},
 		"__page__": {
