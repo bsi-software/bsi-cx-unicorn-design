@@ -3,14 +3,11 @@
  * http://www.bsiag.com/
  */
 
-// Animate Banner Interval
-// Make the interval is only registered once in the Studio Content-Editor.
-// The reason for this awkward code is that this JS is loaded and executed
-// each time a new content is set in the editor. However, the variables have
-// already been set on the window instance (which is the same all of the time).
-if (!window.self['intervalId']) {
+/* ---- BANNER ROTATION ---- */
+
+function rotateBanners() {
   let bannerNo = 1;
-  window.self.intervalId = setInterval(() => {
+  return setInterval(() => {
     bannerNo++;
     if (bannerNo >= 4) {
       bannerNo = 1;
@@ -18,8 +15,6 @@ if (!window.self['intervalId']) {
     $('#banner-image').attr('src', 'img/banner-' + bannerNo + '.png');
   }, 10 * 1000 /* 10 sec. */);
 }
-
-$(document).ready(attachNavigation);
 
 /* ---- NAVIGATION ---- */
 
@@ -54,3 +49,21 @@ function hideNavigationFolderPanel($panel) {
   $(document).off('click', $panel.data('clickHandler'));
   $panel.removeData('clickHandler');
 }
+
+function hideAllNavigationFolderPanels() {
+  $('navigation-visible').each(() => {
+    hideNavigationFolderPanel($(this));
+  });
+}
+
+/* ---- MAIN ---- */
+
+$(document).ready(() => {
+  // FIXME [awe] 16.3: remove this hack if ContentEditor ensures .js is loaded only once
+  if (!window.self['bannerIntervalId']) {
+    window.self.bannerIntervalId = rotateBanners();
+  }
+  hideAllNavigationFolderPanels();
+  attachNavigation();
+});
+
