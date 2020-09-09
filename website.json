@@ -23,6 +23,9 @@
     }
   },
 	"__REM001": "----- INCLUDES -----",
+  "__REM002": "By default all includes listed here are contentType=built-in and editable=false",
+  "__REM003": "All .hbs and .json files must be editable=false, otherwise the syntax of these",
+  "__REM004": "files will be destroyed by the design-parser.",
 	"includes": {
 	  "__master__": {
 		  "name": "Website Master",
@@ -42,12 +45,14 @@
 		"header": {
 		  "name": "Kopfzeile",
 		  "reference": "header",
-			"file": "include/header.html"
+			"file": "include/header.html",
+      "editable": true
 		},
 		"footer": {
 		  "name": "Fusszeile",
 		  "reference": "footer",
-			"file": "include/footer.html"
+			"file": "include/footer.html",
+      "editable": true
 		}
 	}
 }
