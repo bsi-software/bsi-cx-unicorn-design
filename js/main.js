@@ -59,10 +59,6 @@ function hideAllNavigationFolderPanels() {
 /* ---- MAIN ---- */
 
 $(document).ready(() => {
-  // FIXME [awe] 16.3: remove this hack if ContentEditor ensures .js is loaded only once
-  if (!window.self['bannerIntervalId']) {
-    window.self.bannerIntervalId = rotateBanners();
-  }
   hideAllNavigationFolderPanels();
   attachNavigation();
 });

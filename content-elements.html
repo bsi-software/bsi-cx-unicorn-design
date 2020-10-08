@@ -21,12 +21,12 @@
     </div>
 
     <!-- Content Element: Text only -->
-    <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">Text...</div>
+    <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">{{bsi.nls "text_"}}</div>
 
     <!-- Content Element: Text with Image -->
     <div data-bsi-element="text-with-image" class="text-with-image">
       <img src="img/cute-kitty.jpg" class="image" data-bsi-element-part="image">
-      <div class="text" data-bsi-element-part="formatted-text">{{Bildbeschreibung...}}</div>
+      <div class="text" data-bsi-element-part="formatted-text">{{bsi.nls "image.caption_"}}</div>
     </div>
 
     <!-- Content Element: Single Image -->
@@ -36,12 +36,12 @@
 
     <!-- Content Element: CTA Button -->
     <div data-bsi-element="cta-button" class="cta-button-container">
-      <a data-bsi-element-part="link" class="cta-button">Action</a>
+      <a data-bsi-element-part="link" class="cta-button">{{bsi.nls "action"}}</a>
     </div>
 
     <!-- Content-Element: Bullet list -->
     <div data-bsi-element="bullet-list" class="bullet-list">
-      <p>Aufzählung:</p>
+      <p>{{bsi.nls "enumeration"}}</p>
       <ul data-bsi-element-part="iterator" data-bsi-iterator="">
         <li data-bsi-iterator-item="" data-bsi-element-part="formatted-text"></li>
       </ul>
@@ -59,7 +59,7 @@
 
       <div class="content-container-column-right" data-bsi-dropzone="content-container-column-right"
            data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form html social-follow social-share">
-        <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">Text...</div>
+        <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">{{bsi.nls "text_"}}</div>
       </div>
 
     </div>
@@ -68,14 +68,14 @@
     <div data-bsi-element="table" data-bsi-element-part="table" class="table">
       <table>
         <tr>
-          <th>{{bsi.nls "website.title"}}</th>
-          <th>Ipsum</th>
-          <th>Dolor</th>
+          <th>{{bsi.nls "column"}} 1</th>
+          <th>{{bsi.nls "column"}} 2</th>
+          <th>{{bsi.nls "column"}} 3</th>
         </tr>
         <tr>
-          <td>...</td>
-          <td>...</td>
-          <td>...</td>
+          <td>{{bsi.nls "text_"}}</td>
+          <td>{{bsi.nls "text_"}}</td>
+          <td>{{bsi.nls "text_"}}</td>
         </tr>
       </table>
     </div>
@@ -94,10 +94,10 @@
         data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
       <div class="form-button-bar">
         <div class="form-button-container submit">
-          <input type="submit" class="form-button send" value="Send">
+          <input type="submit" class="form-button send" value="{{bsi.nls "send"}}">
         </div>
         <div class="form-button-container reset">
-          <input type="reset" class="form-button reset" value="Reset">
+          <input type="reset" class="form-button reset" value="{{bsi.nls "reset"}}">
         </div>
       </div>
     </form>
@@ -113,10 +113,10 @@
           data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
       <div class="form-button-bar">
         <div class="form-button-container submit">
-          <input type="submit" class="form-button send" value="Send">
+          <input type="submit" class="form-button send" value="{{bsi.nls "send"}}">
         </div>
         <div class="form-button-container reset">
-          <input type="reset" class="form-button reset" value="Reset">
+          <input type="reset" class="form-button reset" value="{{bsi.nls "reset"}}">
         </div>
       </div>
     </form>

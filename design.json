@@ -3,7 +3,11 @@
 	"author": "André Wegmüller",
 	"date": "17.08.2020",
 	"version": "1.1",
-  "__REM000": "----- NLS (LOCALIZED TEXTS) -----",
+  "__REM000": "----- NAVIGATION -----",
+  "navigation" : {
+    "maxLevel": 2
+  },
+  "__REM001": "----- NLS (LOCALIZED TEXTS) -----",
   "nls": {
     "banner": {
       "*": "Please support our friends!",
@@ -20,12 +24,39 @@
     "introduction": {
       "*": "Three reasons why unicorns are amazing: They are so fluffy! Their soft hair and majestic manes make us feel emotions we have NEVER felt before. They come in different colors! Fulfill all your fantasies with a few \"Zzzs\" and dash your way through stars while collecting butterfly fairies. Rainbows everywhere! Unicorns are known for bringing rainbows wherever they go. How can you say no to rainbows?!",
       "de": "Drei Gründe warum Einhörner grossartig sind: sie sind so flauschig! Ihr fluffiges Haar und ihre majestätische Mähne wecken Emotionen in uns, die wir vorher nie gefühlt haben! Es gibt sie in verschiedenen Farben! Sie erfüllen all deine Fantasien mit etwas \"Zzzs\" und galoppieren durch die Sterne während sie Schmetterlings-Feen sammeln. Überall Regenbögen! Wo immer ein Einhorn vorbeikommt hinterlässt es einen Regenbogen. Alle lieben Regenbögen, nicht?"
+    },
+    "action": {
+      "*": "Action",
+      "de": "Aktion"
+    },
+    "text_": {
+      "*": "Text..."
+    },
+    "image.caption_": {
+      "*": "Image caption...",
+      "de": "Bildbeschreibung..."
+    },
+    "enumeration": {
+      "*": "Enumeration:",
+      "de": "Aufzählung:"
+    },
+    "column": {
+      "*": "Column",
+      "de": "Spalte"
+    },
+    "send": {
+      "*": "Send",
+      "de": "Senden"
+    },
+    "reset": {
+      "*": "Reset",
+      "de": "Zurücksetzen"
     }
   },
-	"__REM001": "----- INCLUDES -----",
-  "__REM002": "By default all includes listed here are contentType=built-in and editable=false",
-  "__REM003": "All .hbs and .json files must be editable=false, otherwise the syntax of these",
-  "__REM004": "files will be destroyed by the design-parser.",
+	"__REM002": "----- INCLUDES -----",
+  "__REM003": "By default all includes listed here are contentType=built-in and editable=false",
+  "__REM004": "All .hbs and .json files must be editable=false, otherwise the syntax of these",
+  "__REM005": "files will be destroyed by the design-parser.",
 	"includes": {
 	  "__master__": {
 		  "name": "Website Master",
