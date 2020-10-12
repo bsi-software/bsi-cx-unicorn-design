@@ -2,7 +2,7 @@
   "title": "Unicorn Design for Websites",
   "author": "André Wegmüller",
   "date": "17.08.2020",
-  "metaDataVersion": "1.0",
+  "schemaVersion": "1.0",
   "defaultLocale": "en",
   "locales": [
     "en",
