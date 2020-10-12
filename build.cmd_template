@@ -1,12 +1,30 @@
-set ZIP_PATH=C:\Program Files\7-Zip
-"%ZIP_PATH%\7z" a dist\unicorn-website-design.zip -xr!dist -x!design-preview.png
+REM ### Usage 1: build.cmd            Simply ZIP the design archive and move to /dist directory
+REM ### Usage 2: build.cmd /upload    Upload the design ZIP into the current client session (requires to configure SERVLET_URL and SESSION_ID)
 
-set DESIGN_PATH=.\dist\unicorn-website-design.zip
-
+REM ### ----- CONFIGURATION ---
 REM ### Copy servlet URL from dev menu in DesignForm - keep double quotes
 set SERVLET_URL="[servlet-url]"
 
 REM ### Copy JSESSIONID Cookie Value from Chrome's DevTools - Application - Cookies
 set SESSION_ID=[session-id]
 
+set ZIP_PATH=C:\Program Files\7-Zip
+set DESIGN_PATH=.\dist\unicorn-website-design.zip
+set ARGS=%1
+
+REM ### ----- EXECUTION -------
+
+REM ### ----- CREATE ZIP ------
+del dist\unicorn-website-design.zip
+"%ZIP_PATH%\7z" a dist\unicorn-website-design.zip -xr!dist -xr!.git -x!design-preview.png -x!*.cmd -x!*.cmd_template
+
+IF DEFINED ARGS (
+  IF "%ARGS%"=="/upload" GOTO upload
+)
+goto :eof
+
+REM ### ----- UPLOAD ----------
+:upload
 curl --data-binary @%DESIGN_PATH% -H "Content-Type:application/octet-stream" --cookie "JSESSIONID=%SESSION_ID%" --trace-ascii dist/curl-debug.log %SERVLET_URL%
+
+

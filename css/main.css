@@ -171,6 +171,10 @@ footer a {
   margin: 0 10%;
 }
 
+.text-with-image > img {
+  max-width: 100%;
+}
+
 hr {
   background: pink;
   background: linear-gradient(to bottom, #ffe4e9 0%,#ffd1d9 100%);
