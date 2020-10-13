@@ -65,23 +65,19 @@
     "includes": {
       "__page__": {
         "name": "Vorlage für Inhaltsseiten",
-        "reference": "__page__",
         "file": "include/page.html"
       },
       "navigation": {
         "name": "Navigation",
-        "reference": "navigation",
         "file": "include/navigation.hbs"
       },
       "header": {
         "name": "Kopfzeile",
-        "reference": "header",
         "file": "include/header.html",
         "editable": true
       },
       "footer": {
         "name": "Fusszeile",
-        "reference": "footer",
         "file": "include/footer.html",
         "editable": true
       }
