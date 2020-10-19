@@ -44,6 +44,7 @@ nav {
   text-decoration: none;
 }
 
+.navigation-item-lv1.active:visited,
 .navigation-item-lv1.active {
   color: #0e4572;
 }
@@ -58,6 +59,7 @@ nav {
   min-width: 100px;
 }
 
+.navigation-item-lv2.active:visited,
 .navigation-item-lv2.active {
   color: #e98798;
 }
