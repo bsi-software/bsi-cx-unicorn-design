@@ -17,7 +17,7 @@
 
     <!-- Content Element: Title -->
     <div data-bsi-element="title" class="title">
-      <h2 data-bsi-element-part="plain-text">Titel</h2>
+      <h2 data-bsi-element-part="plain-text">{{bsi.nls "title_"}}</h2>
     </div>
 
     <!-- Content Element: Text only -->
@@ -51,14 +51,14 @@
     <div data-bsi-element="content-container-with-box" class="content-container-with-box">
 
       <div class="content-container-column-left" data-bsi-dropzone="content-container-column-left"
-           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share">
+           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button">
         <div data-bsi-element="single-image" class="single-image">
           <img src="img/unicorn.jpg" data-bsi-element-part="image">
         </div>
       </div>
 
       <div class="content-container-column-right" data-bsi-dropzone="content-container-column-right"
-           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share">
+           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button">
         <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">{{bsi.nls "text_"}}</div>
       </div>
 

@@ -35,6 +35,10 @@
     "text_": {
       "*": "Text..."
     },
+    "title_": {
+      "*": "Title...",
+      "de": "Titel..."
+    },
     "image.caption_": {
       "*": "Image caption...",
       "de": "Bildbeschreibung..."
