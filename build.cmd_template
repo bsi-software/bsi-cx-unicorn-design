@@ -1,12 +1,9 @@
 REM ### Usage 1: build.cmd            Simply ZIP the design archive and move to /dist directory
-REM ### Usage 2: build.cmd /upload    Upload the design ZIP into the current client session (requires to configure SERVLET_URL and SESSION_ID)
+REM ### Usage 2: build.cmd /upload    Upload and stores the design ZIP via REST API (requires to configure REST_API_URL)
 
 REM ### ----- CONFIGURATION ---
-REM ### Copy servlet URL from dev menu in DesignForm - keep double quotes
-set SERVLET_URL="[servlet-url]"
-
-REM ### Copy JSESSIONID Cookie Value from Chrome's DevTools - Application - Cookies
-set SESSION_ID=[session-id]
+REM ### Copy REST API URL from dev menu in DesignForm - keep double quotes
+set REST_API_URL="[url]"
 
 set ZIP_PATH=C:\Program Files\7-Zip
 set DESIGN_PATH=.\dist\unicorn-website-design.zip
@@ -25,6 +22,4 @@ goto :eof
 
 REM ### ----- UPLOAD ----------
 :upload
-curl --data-binary @%DESIGN_PATH% -H "Content-Type:application/octet-stream" --cookie "JSESSIONID=%SESSION_ID%" --trace-ascii dist/curl-debug.log %SERVLET_URL%
-
-
+curl -X PUT --data-binary @%DESIGN_PATH% -H "Content-Type:application/octet-stream" --trace-ascii dist/curl-debug.log %REST_API_URL%
