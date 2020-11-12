@@ -8,7 +8,7 @@
 <title>Unicorn Content Elements</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="{{designBaseUrl}}/css/main.css"/>
 </head>
 <body>
 
@@ -25,13 +25,13 @@
 
     <!-- Content Element: Text with Image -->
     <div data-bsi-element="text-with-image" class="text-with-image">
-      <img src="img/cute-kitty.jpg" class="image" data-bsi-element-part="image">
+      <img src="{{designBaseUrl}}/img/cute-kitty.jpg" class="image" data-bsi-element-part="image">
       <div class="text" data-bsi-element-part="formatted-text">{{bsi.nls "image.caption_"}}</div>
     </div>
 
     <!-- Content Element: Single Image -->
     <div data-bsi-element="single-image" class="single-image">
-      <img src="img/cute-kitty.jpg" data-bsi-element-part="image">
+      <img src="{{designBaseUrl}}/img/cute-kitty.jpg" data-bsi-element-part="image">
     </div>
 
     <!-- Content Element: CTA Button -->
@@ -53,7 +53,7 @@
       <div class="content-container-column-left" data-bsi-dropzone="content-container-column-left"
            data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button">
         <div data-bsi-element="single-image" class="single-image">
-          <img src="img/unicorn.jpg" data-bsi-element-part="image">
+          <img src="{{designBaseUrl}}/img/unicorn.jpg" data-bsi-element-part="image">
         </div>
       </div>
 
@@ -177,7 +177,7 @@
 
     <!-- Content Element: Video, src attribute is set by the part -->
     <div data-bsi-element="video-thumbnail" data-bsi-element-part="video" class="video-container">
-      <img src="img/news-image.png" width="560" height="315" data-bsi-video-thumbnail="" />
+      <img src="{{designBaseUrl}}/img/news-image.png" width="560" height="315" data-bsi-video-thumbnail=""/>
     </div>
 
     <!-- Content Element: Social follow -->
@@ -204,7 +204,7 @@
     <!-- Content Element: News snippets -->
     <div data-bsi-element="news-snippets" data-bsi-element-part="news-snippets" class="news-snippets">
       <div data-bsi-news-snippet class="news-snippet">
-        <img class="ns-image" src="img/news-image.png" data-bsi-property="image"> <!-- will be wrapped in an A element if NS item has a link -->
+        <img class="ns-image" src="{{designBaseUrl}}/img/news-image.png" data-bsi-property="image"> <!-- will be wrapped in an A element if NS item has a link -->
         <h3 class="ns-title" data-bsi-property="title">Breaking News</h3> <!-- will be wrapped in an A element if NS item has a link -->
         <p class="ns-headline" data-bsi-property="headline">Alien Life May Exist on Exoplanet Moons</p>
         <p class="ns-text" data-bsi-property="text">Lorem ipsum dolor sit amet, ea vis odio voluptua, pri ei facer denique. Nobis minimum lucilius cum ei,
@@ -214,15 +214,15 @@
 
     <!-- Content Element: QR-Code -->
     <div data-bsi-element="qr-code" class="qr-code">
-      <img src="{QR Code}" class="image" data-bsi-element-part="image" data-bsi-placeholder="img/qr-code.png" data-bsi-dynamic-src="true">
+      <img src="<QR Code>" class="image" data-bsi-element-part="image" data-bsi-placeholder="{{designBaseUrl}}/img/qr-code.png" data-bsi-dynamic-src="true">
     </div>
 
     <div data-bsi-element="5-star-survey" class="5-star-survey">
-      <a href="[survey-star-1]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
-      <a href="[survey-star-2]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
-      <a href="[survey-star-3]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
-      <a href="[survey-star-4]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
-      <a href="[survey-star-5]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="img/star.png" class="survey-star"></a>
+      <a href="[survey-star-1]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
+      <a href="[survey-star-2]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
+      <a href="[survey-star-3]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
+      <a href="[survey-star-4]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
+      <a href="[survey-star-5]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
     </div>
 
   </div>
@@ -230,8 +230,8 @@
   <!-- Group: MASTER -->
 	<div data-bsi-group="master">
 
-		<div data-bsi-element="master-header">
-		  <img src="img/nyan-cat.gif">
+    <div data-bsi-element="master-header">
+      <img src="{{designBaseUrl}}/img/nyan-cat.gif">
       <h1 data-bsi-element-part="plain-text">{{bsi.nls "website.title"}}</h1>
     </div>
 
