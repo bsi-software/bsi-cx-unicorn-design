@@ -1,0 +1,27 @@
+{
+  "name": "unicorn",
+  "version": "1.0.0",
+  "description": "Unicorn Design for BSI Studio Webites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preview": "node preview.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awegmueller/unicorn.git"
+  },
+  "author": "André Wegmüller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awegmueller/unicorn/issues"
+  },
+  "homepage": "https://github.com/awegmueller/unicorn#readme",
+  "devDependencies": {
+    "replace-in-file": "^6.1.0",
+    "fs-extra": "^9.0.1",
+    "node-watch": "^0.7.0"
+  },
+  "dependencies": {
+  }
+}

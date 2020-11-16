@@ -3,6 +3,8 @@
  * http://www.bsiag.com/
  */
 
+let designBaseUrl = null;
+
 /* ---- BANNER ROTATION ---- */
 
 function rotateBanners() {
@@ -12,7 +14,7 @@ function rotateBanners() {
     if (bannerNo >= 4) {
       bannerNo = 1;
     }
-    $('#banner-image').attr('src', 'img/banner-' + bannerNo + '.png');
+    $('#banner-image').attr('src', designBaseUrl + '/img/banner-' + bannerNo + '.png');
   }, 10 * 1000 /* 10 sec. */);
 }
 
@@ -56,10 +58,22 @@ function hideAllNavigationFolderPanels() {
   });
 }
 
+/**
+ * This is a show-case for how to use the designBaseUrl property in JavaScript dynamically.
+ */
+function readDesignBaseUrl() {
+  let metaElement = document.querySelector('meta[name="studio-design-base-url"]');
+  if (metaElement) {
+    designBaseUrl = metaElement.getAttribute('value');
+  }
+}
+
 /* ---- MAIN ---- */
 
 $(document).ready(() => {
+  readDesignBaseUrl();
   hideAllNavigationFolderPanels();
   attachNavigation();
+  rotateBanners();
 });
 
