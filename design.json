@@ -62,8 +62,8 @@
   },
   "__REM001": "----- INCLUDES -----",
   "__REM003": "By default all includes listed here are contentType=built-in and editable=false",
-  "__REM004": "All .hbs and .json files must be editable=false, otherwise the syntax of these",
-  "__REM005": "files will be destroyed by the design-parser.",
+  "__REM004": "All .hbs files must be editable=false, otherwise the syntax of these files will be",
+  "__REM005": "destroyed by the design-parser.",
   "website": {
     "maxNavigationLevel": 2,
     "includes": {
