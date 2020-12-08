@@ -69,11 +69,13 @@
     "includes": {
       "__page__": {
         "name": "Vorlage für Inhaltsseiten",
-        "file": "include/page.html"
+        "file": "include/page.html",
+        "editable": true
       },
       "navigation": {
         "name": "Navigation",
-        "file": "include/navigation.hbs"
+        "file": "include/navigation.hbs",
+        "editable": false
       },
       "header": {
         "name": "Kopfzeile",
