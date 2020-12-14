@@ -86,76 +86,56 @@
   <div data-bsi-group="forms">
 
     <!-- Content Element: Single Column Form -->
-    <form class="form single-column-form" data-bsi-element="single-column-form" data-bsi-element-part="form">
+    <form class="unicorn-form single-column-form" data-bsi-element="single-column-form" data-bsi-element-part="form" data-scout-object-type="lab.PlainForm" data-scout-root-group-box="$([data-scout-main-box=&quot;true&quot;])">
       <div class="form-validation" data-bsi-form-validation>
         <div class="form-validation-item" data-bsi-form-validation-item></div>
       </div>
-      <div class="form-content" data-bsi-dropzone="form-content"
-        data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
-      <div class="form-button-bar">
-        <div class="form-button-container submit">
-          <input type="submit" class="form-button send" value="{{bsi.nls "send"}}">
+      <div data-scout-object-type="GroupBox" data-scout-main-box="true" data-scout-grid-column-count="1" data-scout-fields="[$(.form-field-container)]" data-scout-menu-bar-position="bottom" data-scout-menus="[$(.form-button-container)]">
+        <div class="form-content" data-bsi-dropzone="form-content"
+          data-bsi-dropzone-allowed-elements="string-field number-field date-field smart-field">
         </div>
-        <div class="form-button-container reset">
-          <input type="reset" class="form-button reset" value="{{bsi.nls "reset"}}">
+        <div class="form-button-bar">
+          <div class="form-button-container submit" data-scout-object-type="OkMenu">
+            <input type="submit" class="form-button send" value="{{bsi.nls "send"}}">
+          </div>
+          <div class="form-button-container reset" data-scout-object-type="ResetMenu">
+            <input type="reset" class="form-button reset" value="{{bsi.nls "reset"}}">
+          </div>
         </div>
       </div>
     </form>
 
-    <!-- Content Element: Two Column Form -->
-    <form class="form two-column-form" data-bsi-element="two-column-form" data-bsi-element-part="form">
-      <div class="form-validation" data-bsi-form-validation>
-        <div class="form-validation-item" data-bsi-form-validation-item></div>
-      </div>
-      <div class="form-column-left form-content" data-bsi-dropzone="form-column-left"
-          data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
-      <div class="form-column-right form-content" data-bsi-dropzone="form-column-right"
-          data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
-      <div class="form-button-bar">
-        <div class="form-button-container submit">
-          <input type="submit" class="form-button send" value="{{bsi.nls "send"}}">
-        </div>
-        <div class="form-button-container reset">
-          <input type="reset" class="form-button reset" value="{{bsi.nls "reset"}}">
-        </div>
-      </div>
-    </form>
-
-    <!-- Content Element: Form Text Field -->
-    <div data-bsi-element="form-field" data-bsi-element-part="form-field" class="form-field-container form-field">
+    <!-- NEW Content Element: Form String Field (Scout enabled) -->
+    <div data-bsi-element="string-field" data-bsi-element-part="form-field" class="form-field-container unicorn-form-field form-field"
+         data-scout-object-type="StringField" data-scout-field-style="classic" data-scout-label="util:label"
+         data-scout-id="util:id" data-scout-mandatory="util:required">
       <label></label>
       <input type="text">
     </div>
 
-    <!-- Content Element: Form Checkbox -->
-    <div data-bsi-element="form-checkbox" data-bsi-element-part="form-checkbox" class="form-field-container form-checkbox">
-      <input type="checkbox">
+    <!-- NEW Content Element: Form Number Field (Scout enabled) -->
+    <div data-bsi-element="number-field" data-bsi-element-part="form-field" class="form-field-container unicorn-form-field form-field"
+         data-scout-object-type="NumberField" data-scout-field-style="classic" data-scout-label="util:label"
+         data-scout-id="util:id" data-scout-mandatory="util:required">
       <label></label>
+      <input type="text">
     </div>
 
-    <!-- Content Element: Form Textarea -->
-    <div data-bsi-element="form-textarea" data-bsi-element-part="form-textarea" class="form-field-container form-textarea">
+    <!-- NEW Content Element: Form Date Field (Scout enabled) -->
+    <div data-bsi-element="date-field" data-bsi-element-part="form-field" class="form-field-container unicorn-form-field form-field"
+         data-scout-field-style="classic" data-scout-object-type="DateField" data-scout-label="util:label"
+         data-scout-id="util:id" data-scout-mandatory="util:required">
       <label></label>
-      <textarea rows="7" maxlength="500"></textarea>
+      <input type="date">
     </div>
 
-    <!-- Content Element: Form Select -->
-    <div data-bsi-element="form-select" data-bsi-element-part="form-select" class="form-field-container form-select">
+    <!-- NEW Content Element: Form SmartField Field (Scout enabled) -->
+    <div data-bsi-element="smart-field" data-bsi-element-part="form-field" class="form-field-container unicorn-form-field form-field"
+         data-scout-object-type="SmartField" data-scout-field-style="classic" data-scout-label="util:label"
+         data-scout-mandatory="util:required" data-scout-tooltip-text="Yes, we have Smartfields now! :-)"
+         data-scout-id="util:id" data-scout-lookup-call="lab.SwapiLookupCall" >
       <label></label>
-      <select size="1">
-        <option>&lt;1. Option&gt;</option>
-      </select>
-    </div>
-
-    <!-- Content Element: Form Radio -->
-    <div data-bsi-element="form-radio" data-bsi-element-part="form-radio" class="form-field-container form-radio">
-      <label></label>
-      <div class="form-radio-group" data-bsi-radio-group>
-        <div class="form-radio-item" data-bsi-radio-item>
-          <input type="radio">
-          <label>&lt;1. Radio-Button&gt;</label>
-        </div>
-      </div>
+      <input type="text">
     </div>
 
   </div>

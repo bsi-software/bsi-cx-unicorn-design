@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="studio-design-base-url" value="{{designBaseUrl}}">
+    <link rel="stylesheet" href="{{designBaseUrl}}/css/scout-theme.css" data-bsi-remove-if="draft"/> <!-- For Scout -->
     <link rel="stylesheet" href="{{designBaseUrl}}/css/main.css"/>
     <script src="{{designBaseUrl}}/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
   </head>
 
-  <body>
+  <body class="scout">
 
   <!-- HEADER -->
 	<bsi:include reference="header"></bsi:include>
@@ -39,6 +40,9 @@
 	<bsi:include reference="footer"></bsi:include>
 
   <script src="{{designBaseUrl}}/js/main.js" data-bsi-remove-if="draft"></script>
+  <script src="{{designBaseUrl}}/js/jquery.js" data-bsi-remove-if="draft"></script>
+  <script src="{{designBaseUrl}}/js/eclipse-scout.js" data-bsi-remove-if="draft"></script>
+  <script src="{{designBaseUrl}}/js/scout-app.js" data-bsi-remove-if="draft"></script>
 
   </body>
 </html>
