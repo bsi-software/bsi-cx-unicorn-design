@@ -2,8 +2,10 @@
  * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
  * http://www.bsiag.com/
  */
+const REST_URL = 'api/story-property/participant';
 
 let designBaseUrl = null;
+let restBaseUrl = null;
 
 /* ---- BANNER ROTATION ---- */
 
@@ -68,12 +70,56 @@ function readDesignBaseUrl() {
   }
 }
 
+function attachRestHandlers() {
+  // determine REST base url, assuming the website is deployed under a path 'www/'.
+  let url = document.location.href;
+  let wwwIndex = url.lastIndexOf('/www');
+  if (wwwIndex > -1) {
+    restBaseUrl = url.substring(0, wwwIndex);
+  }
+
+  let $restCallForms = $('.rest-call-form');
+  if (!$restCallForms.length) {
+    return;
+  }
+
+  $restCallForms.each(function() {
+    let $form = $(this);
+    $form.submit(event => event.preventDefault());
+    let $button = $form.find('button');
+    $button.on('click', onRestButtonClick.bind($form));
+  });
+}
+
+function onRestButtonClick(event) {
+  if (!restBaseUrl) {
+    console.warn('Cannot perform REST request: restBaseUrl is missing. Check if the URL has a /www path');
+    return;
+  }
+
+  let callUrl = restBaseUrl + '/' + REST_URL;
+  console.log('Performing REST call to URL', callUrl);
+  $.ajax({
+    url: callUrl,
+    contentType: 'application/json',
+    dataType: 'json',
+    success: onRestCallSuccess.bind(this) // $form
+  });
+}
+
+function onRestCallSuccess(result) {
+  let $form = this;
+  let $result = $form.find('.result');
+  $result.text(result);
+}
+
 /* ---- MAIN ---- */
 
 $(document).ready(() => {
   readDesignBaseUrl();
   hideAllNavigationFolderPanels();
   attachNavigation();
+  attachRestHandlers();
   rotateBanners();
 });
 

@@ -51,14 +51,14 @@
     <div data-bsi-element="content-container-with-box" class="content-container-with-box">
 
       <div class="content-container-column-left" data-bsi-dropzone="content-container-column-left"
-           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button">
+           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button rest-call">
         <div data-bsi-element="single-image" class="single-image">
           <img src="{{designBaseUrl}}/img/unicorn.jpg" data-bsi-element-part="image">
         </div>
       </div>
 
       <div class="content-container-column-right" data-bsi-dropzone="content-container-column-right"
-           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button">
+           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button rest-call">
         <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">{{bsi.nls "text_"}}</div>
       </div>
 
@@ -217,12 +217,22 @@
       <img src="<QR Code>" class="image" data-bsi-element-part="image" data-bsi-placeholder="{{designBaseUrl}}/img/qr-code.png" data-bsi-dynamic-src="true">
     </div>
 
+    <!-- Content Element: Survey -->
     <div data-bsi-element="5-star-survey" class="5-star-survey">
       <a href="[survey-star-1]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
       <a href="[survey-star-2]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
       <a href="[survey-star-3]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
       <a href="[survey-star-4]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
       <a href="[survey-star-5]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html=""><img src="{{designBaseUrl}}/img/star.png" class="survey-star"></a>
+    </div>
+
+    <!-- Content Element: REST Call -->
+    <div data-bsi-element="rest-call" class="rest-call">
+      <form class="rest-call-form" id="rest-call-form">
+        <p>GET story-property/participant</p>
+        <p><button>Call</button></p>
+        <p class="result">n/a</p>
+      </form>
     </div>
 
   </div>
