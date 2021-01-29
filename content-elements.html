@@ -229,9 +229,23 @@
     <!-- Content Element: REST Call -->
     <div data-bsi-element="rest-call" class="rest-call">
       <form class="rest-call-form" id="rest-call-form">
-        <p>GET story-property/participant</p>
-        <p><button>Call</button></p>
-        <p class="result">n/a</p>
+        <div class="rest-title">Request:</div>
+        <div class="rest-request">
+          <select id="request-method">
+            <option value="GET" selected>GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+          <input type="text" id="request-url" value="api/story-property/participant">
+          <button>Call</button>
+        </div>
+
+        <div class="rest-title">Request Payload:</div>
+        <textarea id="request-payload">{}</textarea>
+
+        <div class="rest-title">Response:</div>
+        <div id="rest-response">n/a</div>
       </form>
     </div>
 

@@ -2,8 +2,6 @@
  * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
  * http://www.bsiag.com/
  */
-const REST_URL = 'api/story-property/participant';
-
 let designBaseUrl = null;
 let restBaseUrl = null;
 
@@ -97,20 +95,42 @@ function onRestButtonClick(event) {
     return;
   }
 
-  let callUrl = restBaseUrl + '/' + REST_URL;
+  let $form = this;
+  let requestUrl = $form.find('#request-url').val();
+  let requestMethod = $form.find('#request-method').val();
+  let callUrl = restBaseUrl + '/' + requestUrl;
+  let payload = null;
+
+  if ('POST' === requestMethod || 'PUT' === requestMethod) {
+    payload = $form.find('#request-payload').val();
+  }
+
   console.log('Performing REST call to URL', callUrl);
   $.ajax({
+    method: requestMethod,
     url: callUrl,
     contentType: 'application/json',
     dataType: 'json',
+    data: payload,
+    error: onRestCallError.bind(this), // $form
     success: onRestCallSuccess.bind(this) // $form
   });
 }
 
+function onRestCallError(jqXHR, textStatus, errorThrown) {
+  let $form = this;
+  let $result = $form.find('#rest-response');
+  $result.text('Error: ' + textStatus);
+}
+
 function onRestCallSuccess(result) {
   let $form = this;
-  let $result = $form.find('.result');
-  $result.text(result);
+  let $result = $form.find('#rest-response');
+  if (result && typeof result === 'object') {
+    $result.text(JSON.stringify(result));
+  } else {
+    $result.text(result);
+  }
 }
 
 /* ---- MAIN ---- */

@@ -639,6 +639,33 @@ input[data-bsi-form-validation-message] {
   color: #026466;
 }
 
+/* ---- REST Call ---- */
+.rest-request {
+  white-space: nowrap;
+}
+
+.rest-request > button {
+  font-family: serif;
+  font-size: 18px;
+}
+
+.rest-title {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+#request-payload {
+  width: 100%;
+  min-height: 70px;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+#rest-response {
+  font-family: monospace;
+  font-size: 16px;
+}
+
 /* ---- News Snippets ---- */
 .news-snippets {
   margin-top: 16px;
