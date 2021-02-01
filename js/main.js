@@ -120,7 +120,8 @@ function onRestButtonClick(event) {
 function onRestCallError(jqXHR, textStatus, errorThrown) {
   let $form = this;
   let $result = $form.find('#rest-response');
-  $result.text('Error: ' + textStatus);
+  $result.text('Error: ' + textStatus + '\n' + errorThrown);
+  console.error('REST call failed: ' + textStatus, errorThrown);
 }
 
 function onRestCallSuccess(result) {
