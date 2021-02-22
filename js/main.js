@@ -134,12 +134,39 @@ function onRestCallSuccess(result) {
   }
 }
 
+/* ---- FORMS ---- */
+function attachFormHandlers() {
+  // Look for forms with an ID 'ajax' and install an asynchronous form handler.
+  // Note: in a productive design you should probably make a form content-element
+  // with a fixed class like 'ajax-form' or an attribute like 'data-ajax-form'.
+  // We use the ID here because we don't want to add additional content elements
+  // for this rare case. In BSI CX you must enable the ajax form processing by
+  // setting the 'asyncFormSubmit' property on the studio.ContentFormConfig object.
+  $('form[id=ajax]').ajaxForm({
+    beforeSubmit: beforeFormSubmit,
+    success: showFormResponse
+  });
+}
+
+function beforeFormSubmit(formData, $form, options) {
+  let queryString = $.param(formData);
+  console.log('About to submit: \n\n' + queryString);
+  return true;
+}
+
+function showFormResponse(responseText, statusText, xhr, $form) {
+  console.log('status: ' + statusText + '\n\nresponseText: \n' + responseText +
+    '\n\nThe output div should have already been updated with the responseText.');
+}
+
+
 /* ---- MAIN ---- */
 
 $(document).ready(() => {
   readDesignBaseUrl();
   hideAllNavigationFolderPanels();
   attachNavigation();
+  attachFormHandlers();
   attachRestHandlers();
   rotateBanners();
 });
