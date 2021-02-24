@@ -144,7 +144,8 @@ function attachFormHandlers() {
   // setting the 'asyncFormSubmit' property on the studio.ContentFormConfig object.
   $('form[id=ajax]').ajaxForm({
     beforeSubmit: beforeFormSubmit,
-    success: showFormResponse
+    success: showFormSuccess,
+    error: showFormError
   });
 }
 
@@ -154,11 +155,15 @@ function beforeFormSubmit(formData, $form, options) {
   return true;
 }
 
-function showFormResponse(responseText, statusText, xhr, $form) {
-  console.log('status: ' + statusText + '\n\nresponseText: \n' + responseText +
+function showFormSuccess(responseText, statusText, xhr, $form) {
+  console.log('responseText: \n' + responseText +
     '\n\nThe output div should have already been updated with the responseText.');
 }
 
+function showFormError(responseText, statusText, xhr, $form) {
+  console.log('error code: ' + responseText.status + '\n\nError Json' +
+    '\n\n' + responseText.responseText);
+}
 
 /* ---- MAIN ---- */
 
