@@ -51,14 +51,14 @@
     <div data-bsi-element="content-container-with-box" class="content-container-with-box">
 
       <div class="content-container-column-left" data-bsi-dropzone="content-container-column-left"
-           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button">
+           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button login-form change-password-form">
         <div data-bsi-element="single-image" class="single-image">
           <img src="{{designBaseUrl}}/img/unicorn.jpg" data-bsi-element-part="image">
         </div>
       </div>
 
       <div class="content-container-column-right" data-bsi-dropzone="content-container-column-right"
-           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button">
+           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button login-form change-password-form">
         <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">{{bsi.nls "text_"}}</div>
       </div>
 
@@ -227,8 +227,57 @@
 
   </div>
 
+  <!-- Group: Benutzerverwaltung -->
+  <div data-bsi-group="user-management">
+
+    <!-- Content Element: Login Formular -->
+    <form class="form single-column-form" data-bsi-element="login-form" data-bsi-element-part="form" data-bsi-form-type="login">
+      <div class="form-validation" data-bsi-form-validation>
+        <div class="form-validation-item" data-bsi-form-validation-item></div>
+      </div>
+      <div data-bsi-element-part="form-field" class="form-field-container form-field">
+        <label>{{bsi.nls "username"}}</label>
+        <input type="text" data-bsi-authentication-field-type="user-id">
+      </div>
+      <div data-bsi-element-part="form-field" class="form-field-container form-field">
+        <label>{{bsi.nls "password"}}</label>
+        <input type="password" data-bsi-authentication-field-type="password">
+      </div>
+      <div class="form-button-bar">
+        <div class="form-button-container submit">
+          <input type="submit" class="form-button send" value="{{bsi.nls " login"}}">
+        </div>
+      </div>
+    </form>
+
+    <!-- Content Element: Passwort Ändern Formular -->
+    <form class="form single-column-form change-password-form" data-bsi-element="change-password-form" data-bsi-element-part="form" data-bsi-form-type="change-password">
+      <div class="form-validation" data-bsi-form-validation>
+        <div class="form-validation-item" data-bsi-form-validation-item></div>
+      </div>
+      <div data-bsi-element-part="form-field" class="form-field-container form-field">
+        <label>{{bsi.nls "old-password"}}</label>
+        <input type="password" data-bsi-authentication-field-type="old-password">
+      </div>
+      <div data-bsi-element-part="form-field" class="form-field-container form-field">
+        <label>{{bsi.nls "new-password"}}</label>
+        <input type="password" data-bsi-authentication-field-type="new-password">
+      </div>
+      <div data-bsi-element-part="form-field" class="form-field-container form-field">
+        <label>{{bsi.nls "confirm-password"}}</label>
+        <input type="password" data-bsi-authentication-field-type="new-password">
+      </div>
+      <div class="form-button-bar">
+        <div class="form-button-container submit">
+          <input type="submit" class="form-button send" value="{{bsi.nls " send"}}">
+        </div>
+      </div>
+    </form>
+
+  </div>
+
   <!-- Group: MASTER -->
-	<div data-bsi-group="master">
+  <div data-bsi-group="master">
 
     <div data-bsi-element="master-header">
       <img src="{{designBaseUrl}}/img/nyan-cat.gif">
