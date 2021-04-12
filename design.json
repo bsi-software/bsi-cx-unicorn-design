@@ -62,6 +62,34 @@
     "reset": {
       "*": "Reset",
       "de": "Zurücksetzen"
+    },
+    "login": {
+      "*": "Login",
+      "de": "Login"
+    },
+    "username": {
+      "*": "Username",
+      "de": "Benutzername"
+    },
+    "password": {
+      "*": "Password",
+      "de": "Passwort"
+    },
+    "password-aendern": {
+      "*": "Change password",
+      "de": "Passwort ändern"
+    },
+    "old-password": {
+      "*": "Old password",
+      "de": "Altes Passwort"
+    },
+    "new-password": {
+      "*": "New password",
+      "de": "Neues Passwort"
+    },
+    "confirm-password": {
+      "*": "Confirm password",
+      "de": "Bestätige Passwort"
     }
   },
   "__REM001": "----- INCLUDES -----",
