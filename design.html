@@ -20,26 +20,29 @@
 
   <body>
 
-  <!-- HEADER -->
-	<bsi:include reference="header"></bsi:include>
+    <!-- HEADER -->
+    <bsi:include reference="header"></bsi:include>
 
-	<!-- NAVIGATION -->
-	<bsi:include reference="navigation"></bsi:include>
+    <!-- NAVIGATION -->
+    <bsi:include reference="navigation"></bsi:include>
 
-  <!-- PAGE -->
-	<bsi:include reference="{navigation.activePage.contentId}"></bsi:include>
+    <img src="{{navigation.activePage.image}}" class="image">
+    <div>{{navigation.activePage.metadata}}</div>
 
-	<hr>
+    <!-- PAGE -->
+    <bsi:include reference="{navigation.activePage.contentId}"></bsi:include>
 
-	<div id="banner">
-		<a href="http://www.bsi-software.com" target="_blank"><img src="{{designBaseUrl}}/img/banner-1.png" id="banner-image"></a><br>
-		<div id="banner-text">{{bsi.nls "banner"}}</div>
-	</div>
+    <hr>
 
-  <!-- FOOTER -->
-	<bsi:include reference="footer"></bsi:include>
+    <div id="banner">
+      <a href="http://www.bsi-software.com" target="_blank"><img src="{{designBaseUrl}}/img/banner-1.png" id="banner-image"></a><br>
+      <div id="banner-text">{{bsi.nls "banner"}}</div>
+    </div>
 
-  <script src="{{designBaseUrl}}/js/main.js" data-bsi-remove-if="draft"></script>
+    <!-- FOOTER -->
+    <bsi:include reference="footer"></bsi:include>
+
+    <script src="{{designBaseUrl}}/js/main.js" data-bsi-remove-if="draft"></script>
 
   </body>
 </html>

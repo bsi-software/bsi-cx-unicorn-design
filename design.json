@@ -67,6 +67,10 @@
       "*": "Login",
       "de": "Login"
     },
+    "logout": {
+      "*": "Logout",
+      "de": "Logout"
+    },
     "username": {
       "*": "Username",
       "de": "Benutzername"
