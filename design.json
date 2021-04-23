@@ -19,6 +19,7 @@
       "contentElements": [
         {
           "contentElementId": "title",
+          "file": "content-elements/content/title.hbs",
           "icon": "heading",
           "label": "Titel",
           "parts": [
@@ -30,6 +31,7 @@
         },
         {
           "contentElementId": "text",
+          "file": "content-elements/content/text.hbs",
           "icon": "text",
           "label": "Text",
           "parts": [
@@ -46,6 +48,7 @@
         },
         {
           "contentElementId": "text-with-image",
+          "file": "content-elements/content/text-with-image.hbs",
           "icon": "text-with-image",
           "label": "Text mit Bild",
           "parts": [
@@ -62,6 +65,7 @@
         },
         {
           "contentElementId": "single-image",
+          "file": "content-elements/content/single-image.hbs",
           "icon": "image",
           "label": "Einzelnes Bild",
           "parts": [
@@ -73,6 +77,7 @@
         },
         {
           "contentElementId": "cta-button",
+          "file": "content-elements/content/cta-button.hbs",
           "description": "Call to action",
           "icon": "megaphone",
           "label": "CTA Button",
@@ -85,6 +90,7 @@
         },
         {
           "contentElementId": "bullet-list",
+          "file": "content-elements/content/bullet-list.hbs",
           "icon": "list",
           "label": "Aufzählung",
           "parts": [
@@ -100,12 +106,14 @@
         },
         {
           "contentElementId": "content-container-with-box",
+          "file": "content-elements/content/content-container-with-box.hbs",
           "description": "Inhalt mit Box",
           "icon": "two-columns",
           "label": "2-Spaltig"
         },
         {
           "contentElementId": "table",
+          "file": "content-elements/content/table.hbs",
           "icon": "table",
           "label": "Tabelle",
           "parts": [
@@ -123,6 +131,7 @@
       "contentElements": [
         {
           "contentElementId": "single-column-form",
+          "file": "content-elements/forms/single-column-form.hbs",
           "description": "Formular",
           "icon": "one-column",
           "label": "1-Spaltig",
@@ -135,6 +144,7 @@
         },
         {
           "contentElementId": "two-column-form",
+          "file": "content-elements/forms/two-column-form.hbs",
           "description": "Formular",
           "icon": "two-columns",
           "label": "2-Spaltig",
@@ -147,6 +157,7 @@
         },
         {
           "contentElementId": "form-field",
+          "file": "content-elements/forms/form-field.html",
           "icon": "formfield",
           "label": "Formularfeld",
           "parts": [
@@ -158,6 +169,7 @@
         },
         {
           "contentElementId": "form-checkbox",
+          "file": "content-elements/forms/form-checkbox.html",
           "icon": "checkbox",
           "label": "Checkbox",
           "parts": [
@@ -169,6 +181,7 @@
         },
         {
           "contentElementId": "form-textarea",
+          "file": "content-elements/forms/form-textarea.html",
           "description": "Mehrzeiliger Text",
           "icon": "textarea",
           "label": "Textarea",
@@ -181,6 +194,7 @@
         },
         {
           "contentElementId": "form-select",
+          "file": "content-elements/forms/form-select.html",
           "description": "Aus Werteliste",
           "icon": "dropdown",
           "label": "Dropdown, Liste",
@@ -193,6 +207,7 @@
         },
         {
           "contentElementId": "form-radio",
+          "file": "content-elements/forms/form-radio.html",
           "description": "Aus Werteliste",
           "icon": "radiobutton",
           "label": "Radio-Buttons",
@@ -211,12 +226,14 @@
       "contentElements": [
         {
           "contentElementId": "html",
+          "file": "content-elements/advanced/html.html",
           "description": "Beliebiges HTML",
           "icon": "text",
           "label": "HTML"
         },
         {
           "contentElementId": "video",
+          "file": "content-elements/advanced/video.html",
           "description": "YouTube, Vimeo, etc.",
           "icon": "video",
           "label": "Video",
@@ -229,6 +246,7 @@
         },
         {
           "contentElementId": "video-thumbnail",
+          "file": "content-elements/advanced/video-thumbnail.hbs",
           "description": "mit Thumbnail",
           "icon": "video",
           "label": "Video",
@@ -241,6 +259,7 @@
         },
         {
           "contentElementId": "social-follow",
+          "file": "content-elements/advanced/social-follow.html",
           "description": "Twitter, Facebook, etc.",
           "icon": "social-follow",
           "label": "Social Follow",
@@ -253,6 +272,7 @@
         },
         {
           "contentElementId": "social-share",
+          "file": "content-elements/advanced/social-share.html",
           "description": "Twitter, Facebook, etc.",
           "icon": "social-share",
           "label": "Social Share",
@@ -265,6 +285,7 @@
         },
         {
           "contentElementId": "news-snippets",
+          "file": "content-elements/advanced/news-snippets.hbs",
           "description": "Liste von News Snippets",
           "icon": "snippet",
           "label": "News",
@@ -277,6 +298,7 @@
         },
         {
           "contentElementId": "qr-code",
+          "file": "content-elements/advanced/qr-code.hbs",
           "icon": "qrcode",
           "label": "QR Code",
           "parts": [
@@ -288,6 +310,7 @@
         },
         {
           "contentElementId": "5-star-survey",
+          "file": "content-elements/advanced/5-star-survey.hbs",
           "icon": "megaphone",
           "label": "5-Stern Umfrage",
           "parts": [
@@ -315,6 +338,7 @@
         },
         {
           "contentElementId": "rest-call",
+          "file": "content-elements/advanced/rest-call.html",
           "icon": "communication",
           "label": "REST Call"
         }
@@ -327,6 +351,7 @@
       "contentElements": [
         {
           "contentElementId": "master-header",
+          "file": "content-elements/master/master-header.hbs",
           "hidden": true,
           "icon": "text",
           "label": "Master Header",

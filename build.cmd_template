@@ -5,15 +5,16 @@ REM ### ----- CONFIGURATION ---
 REM ### Copy REST API URL from dev menu in DesignForm - keep double quotes
 set REST_API_URL="[url]"
 
+set CX_VERSION=22.0
 set ZIP_PATH=C:\Program Files\7-Zip
-set DESIGN_PATH=.\dist\unicorn-website-design.zip
+set DESIGN_PATH=.\dist\unicorn-website-design-%CX_VERSION%.zip
 set ARGS=%1
 
 REM ### ----- EXECUTION -------
 
 REM ### ----- CREATE ZIP ------
 del dist\unicorn-website-design.zip
-"%ZIP_PATH%\7z" a dist\unicorn-website-design.zip -xr!dist -xr!.git -x!design-preview.png -x!*.cmd -x!*.cmd_template
+"%ZIP_PATH%\7z" a dist\unicorn-website-design-%CX_VERSION%.zip -xr!dist -xr!node_modules -xr!.git -x!design-preview.png -x!*.cmd -x!*.cmd_template -x!.gitignore -x!package.json -x!package-lock.json
 
 IF DEFINED ARGS (
   IF "%ARGS%"=="/upload" GOTO upload
