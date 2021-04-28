@@ -14,11 +14,11 @@
   "__REM003": "-------------------- Content-Elements, -Groups and -Parts --------------------",
   "contentElementGroups": [
     {
-      "contentElementGroupId": "content",
+      "groupId": "content",
       "label": "Inhalt",
       "contentElements": [
         {
-          "contentElementId": "title",
+          "elementId": "title",
           "file": "content-elements/content/title.hbs",
           "icon": "heading",
           "label": "Titel",
@@ -30,7 +30,7 @@
           ]
         },
         {
-          "contentElementId": "text",
+          "elementId": "text",
           "file": "content-elements/content/text.hbs",
           "icon": "text",
           "label": "Text",
@@ -47,7 +47,7 @@
           ]
         },
         {
-          "contentElementId": "text-with-image",
+          "elementId": "text-with-image",
           "file": "content-elements/content/text-with-image.hbs",
           "icon": "text-with-image",
           "label": "Text mit Bild",
@@ -64,7 +64,7 @@
           ]
         },
         {
-          "contentElementId": "single-image",
+          "elementId": "single-image",
           "file": "content-elements/content/single-image.hbs",
           "icon": "image",
           "label": "Einzelnes Bild",
@@ -76,7 +76,7 @@
           ]
         },
         {
-          "contentElementId": "cta-button",
+          "elementId": "cta-button",
           "file": "content-elements/content/cta-button.hbs",
           "description": "Call to action",
           "icon": "megaphone",
@@ -89,7 +89,7 @@
           ]
         },
         {
-          "contentElementId": "bullet-list",
+          "elementId": "bullet-list",
           "file": "content-elements/content/bullet-list.hbs",
           "icon": "list",
           "label": "Aufzählung",
@@ -105,14 +105,14 @@
           ]
         },
         {
-          "contentElementId": "content-container-with-box",
+          "elementId": "content-container-with-box",
           "file": "content-elements/content/content-container-with-box.hbs",
           "description": "Inhalt mit Box",
           "icon": "two-columns",
           "label": "2-Spaltig"
         },
         {
-          "contentElementId": "table",
+          "elementId": "table",
           "file": "content-elements/content/table.hbs",
           "icon": "table",
           "label": "Tabelle",
@@ -126,11 +126,11 @@
       ]
     },
     {
-      "contentElementGroupId": "forms",
+      "groupId": "forms",
       "label": "Formulare",
       "contentElements": [
         {
-          "contentElementId": "single-column-form",
+          "elementId": "single-column-form",
           "file": "content-elements/forms/single-column-form.hbs",
           "description": "Formular",
           "icon": "one-column",
@@ -143,7 +143,7 @@
           ]
         },
         {
-          "contentElementId": "two-column-form",
+          "elementId": "two-column-form",
           "file": "content-elements/forms/two-column-form.hbs",
           "description": "Formular",
           "icon": "two-columns",
@@ -156,7 +156,7 @@
           ]
         },
         {
-          "contentElementId": "form-field",
+          "elementId": "form-field",
           "file": "content-elements/forms/form-field.html",
           "icon": "formfield",
           "label": "Formularfeld",
@@ -168,7 +168,7 @@
           ]
         },
         {
-          "contentElementId": "form-checkbox",
+          "elementId": "form-checkbox",
           "file": "content-elements/forms/form-checkbox.html",
           "icon": "checkbox",
           "label": "Checkbox",
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "contentElementId": "form-textarea",
+          "elementId": "form-textarea",
           "file": "content-elements/forms/form-textarea.html",
           "description": "Mehrzeiliger Text",
           "icon": "textarea",
@@ -193,7 +193,7 @@
           ]
         },
         {
-          "contentElementId": "form-select",
+          "elementId": "form-select",
           "file": "content-elements/forms/form-select.html",
           "description": "Aus Werteliste",
           "icon": "dropdown",
@@ -206,7 +206,7 @@
           ]
         },
         {
-          "contentElementId": "form-radio",
+          "elementId": "form-radio",
           "file": "content-elements/forms/form-radio.html",
           "description": "Aus Werteliste",
           "icon": "radiobutton",
@@ -221,18 +221,18 @@
       ]
     },
     {
-      "contentElementGroupId": "advanced",
+      "groupId": "advanced",
       "label": "Fortgeschritten",
       "contentElements": [
         {
-          "contentElementId": "html",
+          "elementId": "html",
           "file": "content-elements/advanced/html.html",
           "description": "Beliebiges HTML",
           "icon": "text",
           "label": "HTML"
         },
         {
-          "contentElementId": "video",
+          "elementId": "video",
           "file": "content-elements/advanced/video.html",
           "description": "YouTube, Vimeo, etc.",
           "icon": "video",
@@ -245,7 +245,7 @@
           ]
         },
         {
-          "contentElementId": "video-thumbnail",
+          "elementId": "video-thumbnail",
           "file": "content-elements/advanced/video-thumbnail.hbs",
           "description": "mit Thumbnail",
           "icon": "video",
@@ -258,7 +258,7 @@
           ]
         },
         {
-          "contentElementId": "social-follow",
+          "elementId": "social-follow",
           "file": "content-elements/advanced/social-follow.html",
           "description": "Twitter, Facebook, etc.",
           "icon": "social-follow",
@@ -271,11 +271,11 @@
           ]
         },
         {
-          "contentElementId": "social-share",
+          "elementId": "social-share",
           "file": "content-elements/advanced/social-share.html",
           "description": "Twitter, Facebook, etc.",
-          "icon": "social-share",
           "label": "Social Share",
+          "icon": "social-share",
           "parts": [
             {
               "partId": "social-share",
@@ -284,11 +284,11 @@
           ]
         },
         {
-          "contentElementId": "news-snippets",
+          "elementId": "news-snippets",
           "file": "content-elements/advanced/news-snippets.hbs",
-          "description": "Liste von News Snippets",
-          "icon": "snippet",
+          "description": "${nlsKey:news.list}",
           "label": "News",
+          "icon": "snippet",
           "parts": [
             {
               "partId": "news-snippets",
@@ -297,10 +297,10 @@
           ]
         },
         {
-          "contentElementId": "qr-code",
+          "elementId": "qr-code",
           "file": "content-elements/advanced/qr-code.hbs",
+          "label": "${nlsKey:qr.code}",
           "icon": "qrcode",
-          "label": "QR Code",
           "parts": [
             {
               "partId": "image",
@@ -309,10 +309,10 @@
           ]
         },
         {
-          "contentElementId": "5-star-survey",
+          "elementId": "5-star-survey",
           "file": "content-elements/advanced/5-star-survey.hbs",
+          "label": "${nlsKey:5star.survey}",
           "icon": "megaphone",
-          "label": "5-Stern Umfrage",
           "parts": [
             {
               "partId": "link",
@@ -337,24 +337,24 @@
           ]
         },
         {
-          "contentElementId": "rest-call",
+          "elementId": "rest-call",
           "file": "content-elements/advanced/rest-call.html",
-          "icon": "communication",
-          "label": "REST Call"
+          "label": "${nlsKey:rest.call}",
+          "icon": "communication"
         }
       ]
     },
     {
-      "contentElementGroupId": "master",
+      "groupId": "master",
       "hidden": true,
       "label": "Master",
       "contentElements": [
         {
-          "contentElementId": "master-header",
+          "elementId": "master-header",
           "file": "content-elements/master/master-header.hbs",
-          "hidden": true,
+          "label": "${nlsKey:master.header}",
           "icon": "text",
-          "label": "Master Header",
+          "hidden": true,
           "parts": [
             {
               "partId": "plain-text",
@@ -365,7 +365,7 @@
       ]
     }
   ],
-  "__REM004": "-------------------- Texts (i18n) --------------------",
+  "__REM004": "-------------------- NLS Texts (i18n) --------------------",
   "nls": {
     "action": {
       "*": "Action",
@@ -418,6 +418,25 @@
     "website.title": {
       "*": "Unicorns for BSI CX Websites",
       "de": "Einhörner für BSI CX Websites"
+    },
+    "master.header": {
+      "*": "Master Header",
+      "de": "Master Kopfzeile"
+    },
+    "rest.call": {
+      "*": "REST Call",
+      "de": "REST Aufruf"
+    },
+    "5star.survey": {
+      "*": "5-Star Survey",
+      "de": "5-Sterne Umfrage"
+    },
+    "qr.code": {
+      "*": "QR Code"
+    },
+    "news.list": {
+      "*": "List with news items",
+      "de": "Liste mit News-Elementen"
     }
   },
   "__REM005": "-------------------- Style Configs --------------------",
