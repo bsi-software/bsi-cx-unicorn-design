@@ -341,6 +341,12 @@
           "file": "content-elements/advanced/rest-call.html",
           "label": "${nlsKey:rest.call}",
           "icon": "communication"
+        },
+        {
+          "elementId": "pie-chart",
+          "file": "content-elements/advanced/pie-chart.html",
+          "label": "${nlsKey:pie.chart}",
+          "icon": "info"
         }
       ]
     },
@@ -426,6 +432,10 @@
     "rest.call": {
       "*": "REST Call",
       "de": "REST Aufruf"
+    },
+    "pie.chart": {
+      "*": "Pie Chart",
+      "de": "Kuchendiagramm"
     },
     "5star.survey": {
       "*": "5-Star Survey",
