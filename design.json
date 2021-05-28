@@ -4,7 +4,8 @@
   "schemaVersion": "22.0",
   "title": "Unicorn Design for BSI CX Websites",
   "author": "André Wegmüller",
-  "date": "03.03.2021",
+  "date": "28.05.2021",
+  "previewImage": "design-preview.png",
   "defaultLocale": "en",
   "locales": [
     "en",
