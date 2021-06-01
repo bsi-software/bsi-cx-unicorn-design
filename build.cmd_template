@@ -14,7 +14,7 @@ REM ### ----- EXECUTION -------
 
 REM ### ----- CREATE ZIP ------
 del dist\unicorn-website-design.zip
-"%ZIP_PATH%\7z" a dist\unicorn-website-design-%CX_VERSION%.zip -xr!dist -xr!node_modules -xr!.git -x!design-preview.png -x!*.cmd -x!*.cmd_template -x!.gitignore -x!package.json -x!package-lock.json
+"%ZIP_PATH%\7z" a dist\unicorn-website-design-%CX_VERSION%.zip -xr!dist -xr!node_modules -xr!.git -x!*.cmd -x!*.cmd_template -x!.gitignore -x!package.json -x!package-lock.json
 
 IF DEFINED ARGS (
   IF "%ARGS%"=="/upload" GOTO upload

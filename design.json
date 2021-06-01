@@ -4,7 +4,8 @@
   "schemaVersion": "22.0",
   "title": "Unicorn Design for BSI CX Websites",
   "author": "André Wegmüller",
-  "date": "03.03.2021",
+  "date": "28.05.2021",
+  "previewImage": "design-preview.png",
   "defaultLocale": "en",
   "locales": [
     "en",
@@ -163,7 +164,16 @@
           "parts": [
             {
               "partId": "form-field",
-              "label": "Formularfeld"
+              "label": "Formularfeld",
+              "__REM008": "Only allow the following input types to be selected in the content-editor. Remove this property",
+              "__REM009": "in order to use all possible input types.",
+              "allowedInputTypes": [
+                "text",
+                "password",
+                "number",
+                "date",
+                "file"
+              ]
             }
           ]
         },
