@@ -353,9 +353,9 @@
           "icon": "communication"
         },
         {
-          "elementId": "pie-chart",
-          "file": "content-elements/advanced/pie-chart.html",
-          "label": "${nlsKey:pie.chart}",
+          "elementId": "chart",
+          "file": "content-elements/advanced/chart.html",
+          "label": "${nlsKey:chart}",
           "icon": "info",
           "parts": [
             {
@@ -449,9 +449,9 @@
       "*": "REST Call",
       "de": "REST Aufruf"
     },
-    "pie.chart": {
-      "*": "Pie Chart",
-      "de": "Kuchendiagramm"
+    "chart": {
+      "*": "Chart",
+      "de": "Diagramm"
     },
     "5star.survey": {
       "*": "5-Star Survey",
