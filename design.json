@@ -356,7 +356,7 @@
           "elementId": "chart",
           "file": "content-elements/advanced/chart.html",
           "label": "${nlsKey:chart}",
-          "icon": "info",
+          "icon": "diagram-line",
           "parts": [
             {
               "partId": "data-source",
