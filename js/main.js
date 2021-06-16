@@ -81,7 +81,7 @@ function attachRestHandlers() {
     return;
   }
 
-  $restCallForms.each(function() {
+  $restCallForms.each(function () {
     let $form = $(this);
     $form.submit(event => event.preventDefault());
     let $button = $form.find('button');
@@ -165,6 +165,15 @@ function showFormError(responseText, statusText, xhr, $form) {
     '\n\n' + responseText.responseText);
 }
 
+/**
+ * Init all chart elements.
+ */
+function attachChartHandlers() {
+  if (typeof ChartUrlProvider !== 'undefined') {
+    document.querySelectorAll('.chart-js').forEach(chart => new ChartUrlProvider(chart).render());
+  }
+}
+
 /* ---- MAIN ---- */
 
 $(document).ready(() => {
@@ -173,6 +182,7 @@ $(document).ready(() => {
   attachNavigation();
   attachFormHandlers();
   attachRestHandlers();
+  attachChartHandlers();
   rotateBanners();
 });
 

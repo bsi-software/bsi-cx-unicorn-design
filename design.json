@@ -351,6 +351,18 @@
           "file": "content-elements/advanced/rest-call.html",
           "label": "${nlsKey:rest.call}",
           "icon": "communication"
+        },
+        {
+          "elementId": "chart",
+          "file": "content-elements/advanced/chart.html",
+          "label": "${nlsKey:chart}",
+          "icon": "diagram-line",
+          "parts": [
+            {
+              "partId": "data-source",
+              "label": "Name"
+            }
+          ]
         }
       ]
     },
@@ -436,6 +448,10 @@
     "rest.call": {
       "*": "REST Call",
       "de": "REST Aufruf"
+    },
+    "chart": {
+      "*": "Chart",
+      "de": "Diagramm"
     },
     "5star.survey": {
       "*": "5-Star Survey",
