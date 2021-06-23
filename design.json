@@ -354,13 +354,13 @@
         },
         {
           "elementId": "chart",
-          "file": "content-elements/advanced/chart.html",
+          "file": "content-elements/advanced/chart.hbs",
           "label": "${nlsKey:chart}",
           "icon": "diagram-line",
           "parts": [
             {
-              "partId": "data-source",
-              "label": "Name"
+              "partId": "url-provider",
+              "label": "Chart-Daten"
             }
           ]
         }
