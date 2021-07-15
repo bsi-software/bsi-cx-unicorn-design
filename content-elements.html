@@ -86,7 +86,7 @@
   <div data-bsi-group="forms">
 
     <!-- Content Element: Single Column Form -->
-    <form class="form single-column-form" data-bsi-element="single-column-form" data-bsi-element-part="form">
+    <form class="form single-column-form" data-bsi-element="single-column-form" data-bsi-element-part="form" id="form">
       <ul class="form-validation" data-bsi-form-validation>
         <li class="form-validation-item" data-bsi-form-validation-item></li>
       </ul>
@@ -102,39 +102,20 @@
       </div>
     </form>
 
-    <!-- Content Element: Two Column Form -->
-    <form class="form two-column-form" data-bsi-element="two-column-form" data-bsi-element-part="form">
-      <ul class="form-validation" data-bsi-form-validation>
-        <li class="form-validation-item" data-bsi-form-validation-item></li>
-      </ul>
-      <div class="form-column-left form-content" data-bsi-dropzone="form-column-left"
-          data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
-      <div class="form-column-right form-content" data-bsi-dropzone="form-column-right"
-          data-bsi-dropzone-allowed-elements="form-field form-checkbox form-textarea form-select form-radio"></div>
-      <div class="form-button-bar">
-        <div class="form-button-container submit">
-          <input type="submit" class="form-button send" value="{{bsi.nls "send"}}">
-        </div>
-        <div class="form-button-container reset">
-          <input type="reset" class="form-button reset" value="{{bsi.nls "reset"}}">
-        </div>
-      </div>
-    </form>
-
     <!-- Content Element: Form Text Field -->
-    <div data-bsi-element="form-field" data-bsi-element-part="form-field" class="form-field-container form-field">
+    <div data-bsi-element="form-field" data-bsi-element-part="form-field" class="form-field-container form-field" id="text">
       <label></label>
       <input type="text">
     </div>
 
     <!-- Content Element: Form Checkbox -->
-    <div data-bsi-element="form-checkbox" data-bsi-element-part="form-checkbox" class="form-field-container form-checkbox">
+    <div data-bsi-element="form-checkbox" data-bsi-element-part="form-checkbox" class="form-field-container form-checkbox" id="yes-no">
       <input type="checkbox">
       <label></label>
     </div>
 
     <!-- Content Element: Form Textarea -->
-    <div data-bsi-element="form-textarea" data-bsi-element-part="form-textarea" class="form-field-container form-textarea">
+    <div data-bsi-element="form-textarea" data-bsi-element-part="form-textarea" class="form-field-container form-textarea" id="free-text">
       <label></label>
       <textarea rows="7" maxlength="500"></textarea>
     </div>
@@ -256,7 +237,7 @@
   <div data-bsi-group="user-management">
 
     <!-- Content Element: Login Formular -->
-    <form class="form single-column-form" data-bsi-element="login-form" data-bsi-element-part="form" data-bsi-form-type="login" data-bsi-remove-if="authenticated">
+    <form class="form single-column-form" data-bsi-element="login-form" data-bsi-element-part="form" data-bsi-form-type="login" data-bsi-remove-if="authenticated" id="login-form">
       <ul class="form-validation" data-bsi-form-validation>
         <li class="form-validation-item" data-bsi-form-validation-item></li>
       </ul>
@@ -281,7 +262,7 @@
     </div>
 
     <!-- Content Element: Passwort Ändern Formular -->
-    <form class="form single-column-form change-password-form" data-bsi-element="change-password-form" data-bsi-element-part="form" data-bsi-form-type="change-password">
+    <form class="form single-column-form change-password-form" data-bsi-element="change-password-form" data-bsi-element-part="form" data-bsi-form-type="change-password"  id="change-password-form">
       <ul class="form-validation" data-bsi-form-validation>
         <li class="form-validation-item" data-bsi-form-validation-item></li>
       </ul>

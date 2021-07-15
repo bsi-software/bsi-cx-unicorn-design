@@ -347,10 +347,8 @@ label {
   box-sizing: border-box;
 }
 
-/* 2-Column Layout */
-.two-column-form {
-  display: flex;
-  flex-wrap: wrap;
+.form {
+  margin-bottom: 20px;
 }
 
 .form-column-left, .form-column-right {
@@ -382,11 +380,6 @@ label {
   position: relative; /* because of required icon */
 }
 
-.two-column-form .form-field > label {
-  width: 100%;
-  min-height: 23px;
-}
-
 .form-field > input {
   box-sizing: border-box;
   border-width: 1px;
@@ -397,10 +390,6 @@ label {
 
 .single-column-form .form-field > input {
   max-width: 300px;
-}
-
-.two-column-form .form-field > input {
-  width: 100%;
 }
 
 /* ---- Form Checkbox ---- */
@@ -433,11 +422,6 @@ label {
   margin-right: 40px;
 }
 
-.two-column-form .form-textarea > label {
-  width: 100%;
-  min-height: 23px;
-}
-
 .single-column-form .form-textarea.required > label {
   width: 200px;
   margin-right: 20px;
@@ -456,19 +440,10 @@ label {
   width: 350px;
 }
 
-.two-column-form .form-textarea > textarea {
-  width: 100%;
-}
-
 /* ---- Form Select ---- */
 .single-column-form .form-select > label {
   width: 180px;
   margin-right: 40px;
-}
-
-.two-column-form .form-select > label {
-  width: 100%;
-  min-height: 23px;
 }
 
 .single-column-form .form-select.required > label {
@@ -487,19 +462,10 @@ label {
   width: 350px;
 }
 
-.two-column-form .form-select > select {
-  width: 100%;
-}
-
 /* ---- Form Radio ---- */
 .single-column-form .form-radio > label {
   width: 180px;
   margin-right: 40px;
-}
-
-.two-column-form .form-radio > label {
-  width: 100%;
-  min-height: 23px;
 }
 
 .single-column-form .form-radio.required > label {
@@ -570,7 +536,7 @@ label {
   background: #f4d9e7;
   border-radius: 8px;
   border: solid 2px #6e327e;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   flex-grow: 2; /* only required for 2-column layout */
 }
 
