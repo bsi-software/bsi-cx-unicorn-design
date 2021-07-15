@@ -565,8 +565,8 @@ label {
 
 /* ---- Form Validation ---- */
 .form-validation {
-  width: 670px;
-  padding: 20px;
+  max-width: 670px;
+  padding: 12px 10px 8px 22px;
   background: #f4d9e7;
   border-radius: 8px;
   border: solid 2px #6e327e;
@@ -575,9 +575,10 @@ label {
 }
 
 .form-validation-item {
-  margin-left: 210px;
+  list-style-type: circle;
   text-align: left;
   color: #742786;
+  margin: 0 0 4px 10px;
 }
 
 input[data-bsi-form-validation-message] {
