@@ -687,6 +687,15 @@ input[data-bsi-form-validation-message] {
   width: 100px;
 }
 
+/* ---- Status Viewer ---- */
+.status-viewer {
+  background-color: #ffffff99;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: sans-serif;
+  font-size: small;
+}
+
 /* ---- styles for style selector ---- */
 .white-background {
   background: #ffffff;

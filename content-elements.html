@@ -51,14 +51,14 @@
     <div data-bsi-element="content-container-with-box" class="content-container-with-box">
 
       <div class="content-container-column-left" data-bsi-dropzone="content-container-column-left"
-           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button login-form change-password-form logout-button rest-call">
+           data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button login-form change-password-form logout-button status-viewer rest-call">
         <div data-bsi-element="single-image" class="single-image">
           <img src="{{designBaseUrl}}/img/unicorn.jpg" data-bsi-element-part="image">
         </div>
       </div>
 
       <div class="content-container-column-right" data-bsi-dropzone="content-container-column-right"
-           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button login-form change-password-form logout-button rest-call">
+           data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button login-form change-password-form logout-button status-viewer rest-call">
         <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">{{bsi.nls "text_"}}</div>
       </div>
 
@@ -262,7 +262,7 @@
     </div>
 
     <!-- Content Element: Passwort Ändern Formular -->
-    <form class="form single-column-form change-password-form" data-bsi-element="change-password-form" data-bsi-element-part="form" data-bsi-form-type="change-password"  id="change-password-form">
+    <form class="form single-column-form change-password-form" data-bsi-element="change-password-form" data-bsi-element-part="form" data-bsi-form-type="change-password" id="change-password-form">
       <ul class="form-validation" data-bsi-form-validation>
         <li class="form-validation-item" data-bsi-form-validation-item></li>
       </ul>
@@ -284,6 +284,12 @@
         </div>
       </div>
     </form>
+
+    <div data-bsi-element="status-viewer" class="status-viewer">
+      Live: <span data-bsi-remove-if="live">no</span> <span data-bsi-remove-if="!live">yes</span> |
+      Draft: <span data-bsi-remove-if="draft">no</span> <span data-bsi-remove-if="!draft">yes</span> |
+      Authenticated: <span data-bsi-remove-if="authenticated">no</span> <span data-bsi-remove-if="!authenticated">yes</span>
+    </div>
 
   </div>
 
