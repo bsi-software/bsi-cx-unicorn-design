@@ -1,7 +1,13 @@
-/*
+/*!
  * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
  * http://www.bsiag.com/
  */
+
+import $ from 'jquery';
+import 'jquery-form';
+import 'chart.js/auto';
+import { ChartUrlProvider } from '@bsi/chart-data-source';
+
 let designBaseUrl = null;
 let restBaseUrl = null;
 
@@ -169,14 +175,12 @@ function showFormError(responseText, statusText, xhr, $form) {
  * Init all chart elements.
  */
 function attachChartHandlers() {
-  if (typeof ChartUrlProvider !== 'undefined') {
-    document.querySelectorAll('.chart-js').forEach(chart => new ChartUrlProvider(chart).render());
-  }
+  document.querySelectorAll('.chart-js').forEach(chart => new ChartUrlProvider(chart).render());
 }
 
 /* ---- MAIN ---- */
 
-$(document).ready(() => {
+$(() => {
   readDesignBaseUrl();
   hideAllNavigationFolderPanels();
   attachNavigation();

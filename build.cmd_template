@@ -13,10 +13,11 @@ set DESIGN_PATH=.\dist\unicorn-website-design-%CX_VERSION%-%DESIGN_BUILD%.zip
 set ARGS=%1
 
 REM ### ----- EXECUTION -------
+npx webpack --mode=production
 
 REM ### ----- CREATE ZIP ------
 del %DESIGN_PATH%
-"%ZIP_PATH%\7z" a %DESIGN_PATH% -xr!dist -xr!node_modules -xr!.git -x!*.cmd -x!*.cmd_template -x!.gitignore -x!package.json -x!package-lock.json
+"%ZIP_PATH%\7z" a %DESIGN_PATH% -xr!dist -xr!node_modules -xr!.git -x!*.cmd -x!*.cmd_template -x!.gitignore -x!package.json -x!package-lock.json -xr!js
 
 IF DEFINED ARGS (
   IF "%ARGS%"=="/upload" GOTO upload
