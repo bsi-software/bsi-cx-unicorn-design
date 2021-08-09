@@ -1,22 +1,23 @@
 {
-  "name": "unicorn",
-  "version": "1.0.0",
-  "description": "Unicorn Design for BSI Studio Webites",
+  "name": "@bsi-cx/unicorn-design",
+  "version": "22.0.0",
+  "description": "Unicorn Design for BSI CX Websites",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preview": "node preview.js"
+    "preview": "node preview.js",
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awegmueller/unicorn.git"
+    "url": "git+https://github.com/bsi-software/bsi-cx-unicorn-design"
   },
   "author": "André Wegmüller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/awegmueller/unicorn/issues"
+    "url": "https://github.com/bsi-software/bsi-cx-unicorn-design/issues"
   },
-  "homepage": "https://github.com/awegmueller/unicorn#readme",
+  "homepage": "https://github.com/bsi-software/bsi-cx-unicorn-design#readme",
   "devDependencies": {
     "fs-extra": "^9.1.0",
     "node-watch": "^0.7.1",
@@ -26,7 +27,7 @@
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
-    "@bsi/chart-data-source": "github:bsi-software/bsicx-charts#semver:^1.1.1",
+    "@bsi-cx/chart": "github:bsi-software/bsi-cx-chart#semver:^1.1.1",
     "chart.js": "^3.5.0",
     "jquery": "^3.6.0",
     "jquery-form": "^4.3.0"
