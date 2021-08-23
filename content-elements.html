@@ -243,15 +243,15 @@
       </ul>
       <div data-bsi-element-part="form-field" class="form-field-container form-field">
         <label>{{bsi.nls "username"}}</label>
-        <input type="text" data-bsi-form-field-type="user-id">
+        <input type="text" data-bsi-form-field-type="user-id" autocomplete="username">
       </div>
       <div data-bsi-element-part="form-field" class="form-field-container form-field">
         <label>{{bsi.nls "password"}}</label>
-        <input type="password" data-bsi-form-field-type="password">
+        <input type="password" data-bsi-form-field-type="password" autocomplete="current-password">
       </div>
       <div class="form-button-bar">
         <div class="form-button-container submit">
-          <input type="submit" class="form-button send" value="{{bsi.nls " login"}}">
+          <input type="submit" class="form-button send" value="{{bsi.nls "login"}}">
         </div>
       </div>
     </form>
@@ -268,19 +268,19 @@
       </ul>
       <div data-bsi-element-part="form-field" class="form-field-container form-field">
         <label>{{bsi.nls "old-password"}}</label>
-        <input type="password" data-bsi-form-field-type="old-password">
+        <input type="password" data-bsi-form-field-type="old-password" autocomplete="current-password">
       </div>
       <div data-bsi-element-part="form-field" class="form-field-container form-field">
         <label>{{bsi.nls "new-password"}}</label>
-        <input type="password" data-bsi-form-field-type="new-password">
+        <input type="password" data-bsi-form-field-type="new-password-1" autocomplete="new-password">
       </div>
       <div data-bsi-element-part="form-field" class="form-field-container form-field">
         <label>{{bsi.nls "confirm-password"}}</label>
-        <input type="password" data-bsi-form-field-type="confirm-password">
+        <input type="password" data-bsi-form-field-type="new-password-2" autocomplete="new-password">
       </div>
       <div class="form-button-bar">
         <div class="form-button-container submit">
-          <input type="submit" class="form-button send" value="{{bsi.nls " send"}}">
+          <input type="submit" class="form-button send" value="{{bsi.nls "send"}}">
         </div>
       </div>
     </form>
