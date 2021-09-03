@@ -2,19 +2,19 @@
 
 
   <div data-bsi-dropzone="main-content" class="main-content"
-       data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code content-container-with-box table single-column-form html video video-thumbnail social-follow social-share cta-button login-form change-password-form logout-button">
+       data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code content-container-with-box table single-column-form html video video-thumbnail social-follow social-share cta-button login-form change-password-form logout-button display-if-authenticated display-if-not-authenticated">
 
   <div data-bsi-element="content-container-with-box" class="content-container-with-box">
 
     <div class="content-container-column-left" data-bsi-dropzone="content-container-column-left"
-         data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button login-form change-password-form logout-button status-viewer rest-call">
+         data-bsi-dropzone-allowed-elements="title text single-image text-with-image bullet-list qr-code table html social-follow social-share cta-button login-form change-password-form logout-button status-viewer rest-call display-if-authenticated display-if-not-authenticated">
       <div data-bsi-element="single-image" class="single-image">
         <img src="{{designBaseUrl}}/img/unicorn.jpg" data-bsi-element-part="image">
       </div>
     </div>
 
     <div class="content-container-column-right" data-bsi-dropzone="content-container-column-right"
-         data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button login-form change-password-form logout-button status-viewer rest-call">
+         data-bsi-dropzone-allowed-elements="title text single-image bullet-list qr-code single-column-form table html social-follow social-share cta-button login-form change-password-form logout-button status-viewer rest-call display-if-authenticated display-if-not-authenticated">
       <div data-bsi-element="text" data-bsi-element-part="formatted-text" class="text">
         {{{bsi.nls "introduction"}}}
       </div>
