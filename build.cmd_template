@@ -13,7 +13,7 @@ set DESIGN_PATH=.\dist\unicorn-website-design-%CX_VERSION%-%DESIGN_BUILD%.zip
 set ARGS=%1
 
 REM ### ----- EXECUTION -------
-npx webpack --mode=production
+call npx webpack --mode=production
 
 REM ### ----- CREATE ZIP ------
 del %DESIGN_PATH%
