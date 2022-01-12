@@ -565,17 +565,21 @@ label {
 
 /* ---- Form Validation ---- */
 .form-validation {
-  width: 670px;
+  max-width: 670px;
   padding: 20px;
   background: #f4d9e7;
   border-radius: 8px;
   border: solid 2px #6e327e;
-  margin: 20px 0;
-  flex-grow: 2; /* only required for 2-column layout */
+  margin-bottom: 20px;
+}
+
+.two-column-form > .form-validation {
+	flex-grow: 2; /* only required for 2-column layout */
+	max-width: 100%;
+	width: 100%;
 }
 
 .form-validation-item {
-  margin-left: 210px;
   text-align: left;
   color: #742786;
 }

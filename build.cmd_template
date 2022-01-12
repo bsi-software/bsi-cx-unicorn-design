@@ -5,15 +5,18 @@ REM ### ----- CONFIGURATION ---
 REM ### Copy REST API URL from dev menu in DesignForm - keep double quotes
 set REST_API_URL="[url]"
 
+REM ### Increase the DESIGN_BUILD variable with every significant new version
+set CX_VERSION=1.3
+set DESIGN_BUILD=6
 set ZIP_PATH=C:\Program Files\7-Zip
-set DESIGN_PATH=.\dist\unicorn-website-design.zip
+set DESIGN_PATH=dist\unicorn-website-design-%CX_VERSION%-%DESIGN_BUILD%.zip
 set ARGS=%1
 
 REM ### ----- EXECUTION -------
 
 REM ### ----- CREATE ZIP ------
-del dist\unicorn-website-design.zip
-"%ZIP_PATH%\7z" a dist\unicorn-website-design.zip -xr!dist -xr!.git -x!design-preview.png -x!*.cmd -x!*.cmd_template
+del %DESIGN_PATH%
+"%ZIP_PATH%\7z" a %DESIGN_PATH% -xr!dist -xr!node_modules -xr!.git -x!design-preview.png -x!*.cmd -x!*.cmd_template -x!.gitignore -x!package.json -x!package-lock.json
 
 IF DEFINED ARGS (
   IF "%ARGS%"=="/upload" GOTO upload
@@ -22,4 +25,6 @@ goto :eof
 
 REM ### ----- UPLOAD ----------
 :upload
-curl -X PUT --data-binary @%DESIGN_PATH% -H "Content-Type:application/octet-stream" --trace-ascii dist/curl-debug.log %REST_API_URL%
+curl -X PUT --data-binary @.\%DESIGN_PATH% -H "Content-Type:application/octet-stream" --trace-ascii dist/curl-debug.log %REST_API_URL%
+
+
