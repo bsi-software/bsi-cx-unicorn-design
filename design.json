@@ -237,9 +237,16 @@
         {
           "elementId": "html",
           "file": "content-elements/advanced/html.html",
-          "description": "Beliebiges HTML",
+          "description": "Source-Code",
           "icon": "text",
-          "label": "HTML"
+          "label": "HTML",
+          "parts": [
+            {
+              "__REM000": "Using an empty label here, removes the group box title in the content element part dialog",
+              "partId": "html",
+              "label": ""
+            }
+          ]
         },
         {
           "elementId": "video",
