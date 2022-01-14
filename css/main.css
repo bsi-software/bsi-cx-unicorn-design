@@ -2,7 +2,7 @@
  * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
  * http://www.bsiag.com/
  */
-body, input, textarea, select {
+body, input, button, textarea, select {
   font-family: serif;
   font-size: 18px;
 }

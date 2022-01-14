@@ -7,7 +7,7 @@ set REST_API_URL="[url]"
 
 REM ### Increase DESIGN_BUILD variable for each build that makes changes to the previous design version
 set CX_VERSION=22.0
-set DESIGN_BUILD=1
+set DESIGN_BUILD=2
 set ZIP_PATH=C:\Program Files\7-Zip
 set DESIGN_PATH=.\dist\unicorn-website-design-%CX_VERSION%-%DESIGN_BUILD%.zip
 set ARGS=%1
