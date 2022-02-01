@@ -27,7 +27,7 @@
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
-    "@bsi-cx/chart": "github:bsi-software/bsi-cx-chart#semver:^1.1.1",
+    "@bsi-cx/chart": "github:bsi-software/bsi-cx-chart#semver:^1.1.2",
     "chart.js": "^3.5.0",
     "jquery": "^3.6.0",
     "jquery-form": "^4.3.0"

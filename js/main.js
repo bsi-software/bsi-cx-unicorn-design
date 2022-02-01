@@ -6,7 +6,7 @@
 import $ from 'jquery';
 import 'jquery-form';
 import 'chart.js/auto';
-import { ChartUrlProvider } from '@bsi/chart-data-source';
+import { ChartUrlProvider } from '@bsi-cx/chart';
 
 let designBaseUrl = null;
 let restBaseUrl = null;
