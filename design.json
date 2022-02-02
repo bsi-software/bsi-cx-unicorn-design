@@ -1,10 +1,10 @@
 {
   "__REM000": "Copyright (c) BSI Business Systems Integration AG. All rights reserved.",
-  "__REM001": "http://www.bsiag.com/",
+  "__REM001": "https://github.com/bsi-software/bsi-cx-unicorn-design/",
   "schemaVersion": "22.0",
   "title": "Unicorn Design for BSI CX Websites",
   "author": "André Wegmüller",
-  "date": "28.05.2021",
+  "date": "02.02.2022",
   "previewImage": "design-preview.png",
   "defaultLocale": "en",
   "locales": [
@@ -68,7 +68,19 @@
           "elementId": "single-image",
           "file": "content-elements/content/single-image.hbs",
           "icon": "image",
-          "label": "Einzelnes Bild",
+          "label": "Bild",
+          "parts": [
+            {
+              "partId": "image",
+              "label": "Bild"
+            }
+          ]
+        },
+        {
+          "elementId": "srcset-image",
+          "file": "content-elements/content/srcset-image.hbs",
+          "icon": "image",
+          "label": "Bild mit Srcset",
           "parts": [
             {
               "partId": "image",

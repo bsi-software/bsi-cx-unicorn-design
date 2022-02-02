@@ -178,6 +178,7 @@ footer a {
 .main-content > .text-with-image,
 .main-content > .text-with-background-image,
 .main-content > .single-image,
+.main-content > .srcset-image,
 .main-content > .table,
 .main-content > .video-container,
 .main-content > .social-media-container{
@@ -233,7 +234,7 @@ h2:first-child {
   background-color: #a2d5ff;
 }
 
-.single-image > img {
+.single-image > img, .srcset-image > img {
   max-width: 100%;
 }
 
