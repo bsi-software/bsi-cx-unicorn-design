@@ -12,7 +12,8 @@ set ZIP_PATH=C:\Program Files\7-Zip
 set DESIGN_PATH=.\dist\unicorn-website-design-%CX_VERSION%-%DESIGN_BUILD%.zip
 set ARGS=%1
 
-REM ### ----- EXECUTION -------
+REM ### ----- BUILD -------
+call npm install --ignore-scripts
 call npx webpack --mode=production
 
 REM ### ----- CREATE ZIP ------
