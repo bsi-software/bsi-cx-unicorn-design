@@ -177,14 +177,33 @@
             {
               "partId": "form-field",
               "label": "Formularfeld",
-              "__REM008": "Only allow the following input types to be selected in the content-editor. Remove this property",
-              "__REM009": "in order to use all possible input types.",
-              "allowedInputTypes": [
+              "__REM008": "If the property 'allowedInputTypes' below is uncommented, only the defined input-types can",
+              "__REM009": "be selected in the content-editor. If the property is not set, all input-types are available.",
+              "__REM010": "Currently these types are supported by CX (as defined by 'FormFieldTypeCodeType' in Java):",
+              "__REM011": "[Basic forms]",
+              "__REM012": "- date",
+              "__REM013": "- datetime-local",
+              "__REM014": "- email",
+              "__REM015": "- file",
+              "__REM016": "- number",
+              "__REM017": "- password",
+              "__REM018": "- range",
+              "__REM019": "- tel",
+              "__REM020": "- text",
+              "__REM021": "- time",
+              "__REM022": "[Login forms, form-type=login]",
+              "__REM023": "- user-id",
+              "__REM024": "- captcha",
+              "__REM025": "[Change password forms, form-type=change-password]",
+              "__REM026": "- old-password",
+              "__REM027": "- new-password-1",
+              "__REM028": "- new-password-2",
+              "__REM029": "[Preference center forms, form-type=pc-double-opt-in-login]",
+              "__REM030": "- pc-email-address",
+              "__REM031__allowedInputTypes": [
                 "text",
                 "password",
-                "number",
-                "date",
-                "file"
+                "number"
               ]
             }
           ]
